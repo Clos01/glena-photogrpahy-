@@ -14,18 +14,18 @@ function Featured() {
     <>
       <section className="bg-gradient-to-b from-[#419F8E] to-white">
         <div className="text-center py-8">
-          <h1 className="text-white text-4xl font-bold mt-[4rem]">Featured work</h1>
+          <h1 className="txt-height-lg text-white  font-bold mt-[4rem]">Featured work</h1>
           <h2 className="text-white text-xl">Check out some of my work!</h2>
         </div>
         {/* Card container */}
         <div className="container mx-auto py-8">
           {/* White rounded container */}
-          <div className="bg-white shadow-lg rounded-lg p-4">
+          <div className="Bg-container bg-white shadow-lg rounded-lg p-4  space-x-8 ">
             {/* Card grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
               {images.map((image, index) => (
                 <div key={index} className="p-2"> {/* Adjust width of card container */}
-                  <div className="bg-white shadow-lg rounded-md">
+                  <div className="image-shadow bg-white shadow-lg rounded-lg ">
                     <img
                       className="w-full h-60 md:h-[25rem] object-cover rounded-t-md"
                       src={Glenda}
