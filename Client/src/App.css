@@ -4,12 +4,15 @@
 .custom-object-scale{
   transform: scale(1);
 }
-.Bg-container {
-  border-radius: 10%; /* Create an oval/ellipse shape */
+@media (min-width: 1024px){
+  .lg-bg-container {
+  border-radius: 10%;
   overflow: hidden; /* Hide the content that overflows the oval shape */
-  max-width: calc(100% - 32px); /* Set max-width to ensure it doesn't extend to the edge (subtract double the padding) */
-  padding: 25px 100px;
+ padding-left: 100px;
+ padding-right: 100px;
 }
+}
+
 .Bg-container img {
   padding: 8px; /* Adjust the padding as needed */
 }

@@ -20,7 +20,7 @@ function Featured() {
         {/* Card container */}
         <div className="container mx-auto py-8">
           {/* White rounded container */}
-          <div className="Bg-container bg-white shadow-lg rounded-lg p-4  space-x-8 ">
+          <div className="Bg-container lg-bg-container  bg-white shadow-lg rounded-lg p-4  space-x-8 ">
             {/* Card grid */}
             <div className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
               {images.map((image, index) => (
