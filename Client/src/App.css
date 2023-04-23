@@ -19,3 +19,6 @@
 .image-shadow {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur, color */
 }
+.text-right{
+  text-align: right;
+}

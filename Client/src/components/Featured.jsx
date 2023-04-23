@@ -13,10 +13,10 @@ function Featured() {
   return (
     <>
       <section className="bg-gradient-to-b from-[#419F8E] to-white">
-        <div className="text-center py-8">
-          <h1 className="txt-height-lg text-white  font-bold mt-[4rem]">Featured work</h1>
-          <h2 className="text-white text-xl">Check out some of my work!</h2>
-        </div>
+      <div className="text-center py-8">
+  <h1 className="txt-height-lg text-white font-bold mt-[4rem]">Featured Work</h1>
+  <h2 className="text-white text-xl">Explore a selection of my portfolio.</h2>
+</div>
         {/* Card container */}
         <div className="container mx-auto py-8">
           {/* White rounded container */}
