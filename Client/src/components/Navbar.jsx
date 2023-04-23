@@ -18,21 +18,21 @@ function Navbar() {
       <Link
         to="/"
         onClick={closeMenu}
-        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className=" text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
       >
         Home
       </Link>
       <Link
         to="/gallery"
         onClick={closeMenu}
-        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
       >
         Gallery
       </Link>
       <Link
         to="/contact"
         onClick={closeMenu}
-        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
       >
         Contact
       </Link>
@@ -41,7 +41,7 @@ function Navbar() {
         target="_blank"
         rel="noopener noreferrer"
         onClick={closeMenu}
-        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center justify-center"
+        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center justify-center"
       >
         <FaInstagram className="mr-2" />
         <span>Instagram</span>
@@ -50,7 +50,7 @@ function Navbar() {
   );
 
   return (
-    <nav className="bg-gray-800">
+    <nav className="bg-white">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
@@ -63,7 +63,7 @@ function Navbar() {
           </div>
           {/* Hamburger Icon (visible on small screens) */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-gray-300 hover:text-white focus:outline-none">
+            <button onClick={toggleMenu} className="text-gray-900 hover:text-white focus:outline-none">
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
