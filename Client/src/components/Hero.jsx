@@ -12,7 +12,7 @@ function Hero() {
             src={glenda}
             alt="Background"
           />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="absolute inset-0 bg-black opacity-25"></div>
         </div>
 
         {/* Text content on the left side */}
