@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import glenda from "../images/Glenda.png";
 
 function Hero() {
@@ -18,11 +18,14 @@ function Hero() {
         {/* Text content on the left side */}
         <div className="relative flex items-center justify-start h-full px-8">
           <div className="text-white max-w-lg">
-            <h1 className="text-4xl font-bold mb-4">Welcome to Our Website</h1>
-            <p className="text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac
-              libero malesuada, cursus tellus in, vestibulum sapien.
+            <h1 className="text-4xl italic mb-4">Hello,</h1>
+            <p className="text-lg italic ">
+              I'm Glenda
             </p>
+            <p>  Feel free to look around here and explore the captivating moments
+              captured through Glenda's lens. If you have any questions about
+              the services offered or the photography process, don't hesitate to
+              check out the FAQ section for helpful answers and insights</p>
           </div>
         </div>
       </div>

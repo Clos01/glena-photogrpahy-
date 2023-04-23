@@ -12,22 +12,22 @@ function Featured() {
   ];
   return (
     <>
-      <section className="bg-gradient-to-b from-green-500 to-white">
+      <section className="bg-gradient-to-b from-[#419F8E] to-white">
         <div className="text-center py-8">
-          <h1 className="text-white text-3xl font-bold">Featured work</h1>
+          <h1 className="text-white text-4xl font-bold mt-[4rem]">Featured work</h1>
           <h2 className="text-white text-xl">Check out some of my work!</h2>
         </div>
         {/* Card container */}
         <div className="container mx-auto py-8">
           {/* White rounded container */}
-          <div className="bg-white shadow-lg rounded-md">
+          <div className="bg-white shadow-lg rounded-lg p-4">
             {/* Card grid */}
-            <div className="flex flex-wrap justify-center p-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {images.map((image, index) => (
-                <div key={index} className="w-1/3 p-4">
+                <div key={index} className="p-2"> {/* Adjust width of card container */}
                   <div className="bg-white shadow-lg rounded-md">
                     <img
-                      className="w-full h-48 object-cover rounded-lg"
+                      className="w-full h-60 md:h-[25rem] object-cover rounded-t-md"
                       src={Glenda}
                       alt="Card"
                     />
