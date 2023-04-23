@@ -1,12 +1,12 @@
 import React from 'react'
-import Hero from '../components/Hero'
-import Featured from '../components/Featured'
+// import Hero from '../components/Hero'
+// import Featured from '../components/Featured'
 function Home() {
   return (
     <>
     
-    <Hero/>
-    <Featured/>
+    {/* <Hero/>
+    <Featured/> */}
     </>
   )
 }
