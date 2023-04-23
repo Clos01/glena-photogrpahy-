@@ -12,7 +12,7 @@ function Featured() {
   ];
   return (
     <>
-      <section className="bg-gradient-to-b from-[#419F8E] to-white">
+      <section className="bg-gradient-to-b from-[#6bc489d2] to-white">
       <div className="text-center py-8">
   <h1 className="txt-height-lg text-white font-bold mt-[4rem]">Featured Work</h1>
   <h2 className="text-white text-xl">Explore a selection of my portfolio.</h2>
