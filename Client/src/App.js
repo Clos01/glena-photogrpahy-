@@ -3,6 +3,7 @@ import "./App.css"
 import Navbar from "./components/Navbar";
 import Home from './pages/Home';
 import Footer from './components/Footer';
+import About from './pages/About';
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
     <Routes>
 
       <Route path='/' element={<Home />} />
+      <Route path='/About' element={<About />} />
+      {/* <Route path='/About' element={<About />} /> */}
 
     </Routes>
     <Footer/>
