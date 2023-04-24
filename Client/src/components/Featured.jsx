@@ -20,12 +20,12 @@ function Featured() {
         {/* Card container */}
         <div className="container mx-auto py-8">
           {/* White rounded container */}
-          <div className="Bg-container lg-bg-container  bg-white shadow-lg rounded-lg p-4  space-x-8 ">
+          <div className="Bg-container lg-bg-container  bg-white shadow-lg rounded-lg p-4  pb-20 pt-20 space-x-8">
             {/* Card grid */}
             <div className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 ">
               {images.map((image, index) => (
                 <div key={index} className="p-2"> {/* Adjust width of card container */}
-                  <div className="image-shadow bg-white shadow-lg rounded-lg ">
+                  <div className="image-shadow bg-white shadow-lg rounded-lg  ">
                     <img
                       className="w-full h-60 md:h-[25rem] object-cover rounded-t-md"
                       src={Glenda}
