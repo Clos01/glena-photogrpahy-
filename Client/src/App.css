@@ -4,3 +4,21 @@
 .custom-object-scale{
   transform: scale(1);
 }
+.Bg-container {
+  border-radius: 10%; /* Create an oval/ellipse shape */
+  overflow: hidden; /* Hide the content that overflows the oval shape */
+  max-width: calc(100% - 32px); /* Set max-width to ensure it doesn't extend to the edge (subtract double the padding) */
+  padding: 25px 100px;
+}
+.Bg-container img {
+  padding: 8px; /* Adjust the padding as needed */
+}
+.txt-height-lg{
+  font-size: 4rem;
+}
+.image-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur, color */
+}
+.text-right{
+  text-align: right;
+}
