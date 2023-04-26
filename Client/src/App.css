@@ -22,3 +22,19 @@
 .text-right{
   text-align: right;
 }
+
+
+/* Rounded corners for the card */
+.bg-white.rounded-lg {
+  border-radius: 1rem;
+}
+
+/* Position the icon at the top and overlap it a bit */
+.card-icon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  height: 8rem;
+}
