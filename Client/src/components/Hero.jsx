@@ -19,7 +19,7 @@ function Hero() {
         <div className="relative flex items-center justify-start h-full px-8">
           <div className="text-white max-w-lg">
             <h1 className="text-4xl italic mb-4">Hello,</h1>
-            <p className="text-lg italic ">
+            <p className="text-lg italic pb-4 ">
               I'm Glenda
             </p>
             <p>  Feel free to look around here and explore the captivating moments
