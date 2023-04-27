@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaInstagram, FaBars, FaTimes } from 'react-icons/fa';
 
+import logo from '../images/Logo.jpg'; 
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -63,8 +65,8 @@ function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             {/* LOGO */}
             <img
-              className="h-8 w-8"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+              className="h-32 w-32"
+              src={logo}
               alt="logo"
             />
           </div>
