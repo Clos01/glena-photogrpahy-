@@ -23,6 +23,13 @@ function Navbar() {
         Home
       </Link>
       <Link
+        to="/About"
+        onClick={closeMenu}
+        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+      >
+        About 
+      </Link>
+      <Link
         to="/gallery"
         onClick={closeMenu}
         className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
