@@ -122,16 +122,12 @@ function Services() {
 
   return (
     <div className="container mx-auto">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold">Our Pricing</h2>
-      </div>
-
       <div className="relative">
         <div className="carousel w-full flex justify-center">
           <div className="slide active">
             <div className="p-4 bg-white">
               <div className="flex justify-center">
-                <h3 className="text-xl font-bold mb-4">
+                <h3 className="text-3xl font-bold mb-10" style={{ color: "#88b17e" }}>
                   {slides[currentSlide].title}
                 </h3>
               </div>
