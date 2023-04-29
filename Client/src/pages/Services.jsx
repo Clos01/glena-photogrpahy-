@@ -125,7 +125,7 @@ function Services() {
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold">Our Pricing</h2>
       </div>
-  
+
       <div className="relative">
         <div className="carousel w-full flex justify-center">
           <div className="slide active">
@@ -139,7 +139,7 @@ function Services() {
                 <div key={index}>
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center">
-                    <p
+                      <p
                         className="text-gray-700 mt-2 mr-2"
                         style={{ color: "#0f3649" }}
                       >
@@ -163,7 +163,7 @@ function Services() {
             </div>
           </div>
         </div>
-  
+
         <div className="dots absolute bottom-0 left-0 right-0 flex justify-center">
           {slides.map((_, index) => (
             <button
@@ -173,7 +173,7 @@ function Services() {
             ></button>
           ))}
         </div>
-  
+
         <button
           className="prev absolute top-1/2 left-0 transform -translate-y-1/2"
           onClick={goToPreviousSlide}
