@@ -95,13 +95,18 @@ function Services() {
     {
       title: "Travel Fees",
       content: [
-        { images: "1", price: "$10" },
-        { images: "2", price: "$20" },
-        { images: "3", price: "$30" },
-        { images: "4", price: "$40" },
-        { images: "5", price: "$50" },
+        { minutes: "30/30+", price: "$10" },
+        { hours: "1/1+", price: "$25" },
+        { hours: "2/2+", price: "$50" },
+        { hours: "3/3+", price: "$75" },
       ],
     },
+    {
+        title: "Rushed Edit Fees",
+        content: [
+          { images: "If images are needed before 7 business days", price: "$25" },
+        ],
+      },
     // Add more slides here if needed
   ];
 
