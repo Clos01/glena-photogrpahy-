@@ -45,16 +45,13 @@ function Navbar() {
       >
         Contact
       </Link>
-      <a
-        href="https://www.instagram.com"
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        to="/Polices"
         onClick={closeMenu}
-        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center justify-center"
+        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
       >
-        <FaInstagram className="mr-2" />
-        <span>Instagram</span>
-      </a>
+        Polices
+      </Link>
     </>
   );
 
