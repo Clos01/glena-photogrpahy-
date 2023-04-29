@@ -25,3 +25,15 @@
 .text-right{
   text-align: right;
 }
+
+
+
+.price-box {
+  background-color: #0f3649;
+  display: inline-block;
+  border-radius: 0.25rem;
+}
+
+.price-box p {
+  margin: 0;
+}
