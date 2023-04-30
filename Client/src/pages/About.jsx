@@ -1,6 +1,5 @@
 import React from "react";
 import Glenda from "../images/Glenda.png";
-
 function About() {
   return (
     <>

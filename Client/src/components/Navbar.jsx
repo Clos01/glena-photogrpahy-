@@ -46,6 +46,11 @@ function Navbar() {
         Contact
       </Link>
       <Link
+        to="/Polices"
+        onClick={closeMenu}
+        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+      >
+        Polices
         to="/services"
         onClick={closeMenu}
         className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
