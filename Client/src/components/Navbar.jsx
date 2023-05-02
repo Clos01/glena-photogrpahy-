@@ -9,6 +9,7 @@ function Navbar() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    console.log('Menu toggled, isOpen = ', isOpen);
   };
 
   const closeMenu = () => {
@@ -20,47 +21,44 @@ function Navbar() {
       <Link
         to="/"
         onClick={closeMenu}
-        className=" text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className=" mobileNavCss mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium p-4 "
       >
         Home
       </Link>
       <Link
         to="/About"
         onClick={closeMenu}
-        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 p-4 rounded-md text-sm font-medium"
       >
         About 
       </Link>
       <Link
         to="/gallery"
         onClick={closeMenu}
-        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 p-4 rounded-md text-sm font-medium"
       >
         Gallery
       </Link>
       <Link
         to="/contact"
         onClick={closeMenu}
-        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 p-4 rounded-md text-sm font-medium"
       >
         Contact
       </Link>
-      <a
-        href="https://www.instagram.com"
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        to="/Polices"
         onClick={closeMenu}
-        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center justify-center"
+        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 p-4 rounded-md text-sm font-medium"
       >
-        <FaInstagram className="mr-2" />
-        <span>Instagram</span>
-      </a>
+        Polices
+      </Link>
     </>
   );
 
   return (
-    <nav className="bg-white">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px8">
+    <nav className="bg-white w-full">
+      <div className="mx-auto px-2  lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             {/* LOGO */}
@@ -71,8 +69,8 @@ function Navbar() {
             />
           </div>
           {/* Hamburger Icon (visible on small screens) */}
-          <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-gray-900 hover:text-white focus:outline-none">
+          <div className="md:hidden " >
+            <button onClick={toggleMenu} className="text-gray-900 hover:text-green focus:outline-none">
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
@@ -81,11 +79,12 @@ function Navbar() {
             {navLinks}
           </div>
           {/* Mobile Navigation Menu */}
-          <div className={`absolute top-16 right-0 w-full md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-            <div className="bg-gray-700 p-4 flex flex-col items-center space-y-4">
-              {navLinks}
-            </div>
-          </div>
+<div className={`mobileNavCss w-full absolute top-16 right-0  md:hidden ${isOpen ? 'block' : 'hidden'}`} >
+  <div className="  flex flex-col items-center space-y-4">
+    {navLinks}
+  </div>
+</div>
+
         </div>
       </div>
     </nav>
