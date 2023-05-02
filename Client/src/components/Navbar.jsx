@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-import logo from '../images/Logo.jpg'; 
+import logo from '../images/Logo.jpg';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,6 +46,13 @@ function Navbar() {
         Contact
       </Link>
       <Link
+        to="/Polices"
+        onClick={closeMenu}
+        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+      >
+        Polices
+      </Link>
+      <Link
         to="/services"
         onClick={closeMenu}
         className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -61,11 +68,7 @@ function Navbar() {
         <div className="relative flex items-center justify-between h-full">
           <div className="flex-shrink-0 flex items-center">
             {/* LOGO */}
-            <img
-              className="h-24 w-24"
-              src={logo}
-              alt="logo"
-            />
+            <img className="h-24 w-24" src={logo} alt="logo" />
           </div>
           {/* Hamburger Icon (visible on small screens) */}
           <div className="md:hidden">

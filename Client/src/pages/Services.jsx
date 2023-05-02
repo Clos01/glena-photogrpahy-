@@ -93,77 +93,78 @@ function Services() {
       ],
     },
     {
-      title: "Travel Fees",
-      content: [
-        { minutes: "30/30+", price: "$10" },
-        { hours: "1/1+", price: "$25" },
-        { hours: "2/2+", price: "$50" },
-        { hours: "3/3+", price: "$75" },
-      ],
-    },
-    {
-        title: "Rushed Edit Fees",
+        title: "Travel Fees",
         content: [
-          { images: "If images are needed before 7 business days", price: "$25" },
+          { description: "30/30+ minutes", price: "$10" },
+          { description: "1/1+ hour", price: "$25" },
+          { description: "2/2+ hours", price: "$50" },
+          { description: "3/3+ hours", price: "$75" },
         ],
       },
-    // Add more slides here if needed
-  ];
-
-  //   carousel handling
-  const handleSlideChange = (index) => {
-    setCurrentSlide(index);
-  };
-
-  const goToPreviousSlide = () => {
-    const previousSlide = (currentSlide - 1 + slides.length) % slides.length;
-    setCurrentSlide(previousSlide);
-  };
-
-  const goToNextSlide = () => {
-    const nextSlide = (currentSlide + 1) % slides.length;
-    setCurrentSlide(nextSlide);
-  };
-
-  return (
-    <div className="container mx-auto">
-      <div className="relative">
-        <div className="carousel w-full flex justify-center">
-          <div className="slide active">
-            <div className="p-4 bg-white">
-              <div className="flex justify-center">
-                <h3 className="text-3xl font-bold mb-10" style={{ color: "#88b17e" }}>
-                  {slides[currentSlide].title}
-                </h3>
-              </div>
-              {slides[currentSlide].content.map((line, index) => (
-                <div key={index}>
-                  <div className="flex justify-between items-center mb-4">
-                    <div className="flex items-center">
-                      <p
-                        className="text-gray-700 mt-2 mr-2"
-                        style={{ color: "#0f3649" }}
-                      >
-                        {line.images} images
-                      </p>
-                    </div>
-                    <div className="price-box ml-4">
-                      <p className="text-white px-4 py-1">{line.price}</p>
-                    </div>
-                  </div>
-                  <hr
-                    className="my-4"
-                    style={{
-                      borderTop: "2px solid #88b17e",
-                      marginLeft: "-2rem",
-                      marginRight: "-2rem",
-                    }}
-                  />
+      {
+        title: "Rushed Edit Fees",
+        content: [
+          { description: "If images are needed before 7 business days", price: "$25" },
+        ],
+      },
+    ];
+  
+    const handleSlideChange = (index) => {
+      setCurrentSlide(index);
+    };
+  
+    const goToPreviousSlide = () => {
+      const previousSlide = (currentSlide - 1 + slides.length) % slides.length;
+      setCurrentSlide(previousSlide);
+    };
+  
+    const goToNextSlide = () => {
+      const nextSlide = (currentSlide + 1) % slides.length;
+      setCurrentSlide(nextSlide);
+    };
+  
+    return (
+      <div className="container mx-auto">
+        <div className="relative">
+          <div className="carousel w-full flex justify-center">
+            <div className="slide active">
+              <div className="p-4 bg-white">
+                <div className="flex justify-center">
+                  <h3 className="text-3xl font-bold mb-10" style={{ color: "#88b17e" }}>
+                    {slides[currentSlide].title}
+                  </h3>
                 </div>
-              ))}
+                {slides[currentSlide].content.map((item, index) => (
+                  <div key={index}>
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="flex items-center">
+                        {(currentSlide === slides.length - 2 || currentSlide === slides.length - 1) ? (
+                          <p className="text-gray-700 mt-2 mr-2" style={{ color: "#0f3649" }}>
+                            {item.description}
+                          </p>
+                        ) : (
+                          <p className="text-gray-700 mt-2 mr-2" style={{ color: "#0f3649" }}>
+                            {item.images} images
+                          </p>
+                        )}
+                      </div>
+                      <div className="price-box ml-4">
+                        <p className="text-white px-4 py-1">{item.price}</p>
+                      </div>
+                    </div>
+                    <hr
+                      className="my-4"
+                      style={{
+                        borderTop: "2px solid #88b17e",
+                        marginLeft: "-2rem",
+                        marginRight: "-2rem",
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
         <div className="dots absolute bottom-0 left-0 right-0 flex justify-center">
           {slides.map((_, index) => (
@@ -190,6 +191,5 @@ function Services() {
       </div>
     </div>
   );
-}
-
+          }
 export default Services;
