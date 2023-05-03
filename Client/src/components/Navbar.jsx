@@ -9,6 +9,7 @@ function Navbar() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    console.log('Menu toggled, isOpen = ', isOpen);
   };
 
   const closeMenu = () => {
@@ -20,6 +21,7 @@ function Navbar() {
       <Link
         to="/"
         onClick={closeMenu}
+        className=" mobileNavCss mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium p-4 "
         className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
       >
         Home
@@ -27,27 +29,30 @@ function Navbar() {
       <Link
         to="/About"
         onClick={closeMenu}
-        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 p-4 rounded-md text-sm font-medium"
       >
         About 
       </Link>
       <Link
         to="/gallery"
         onClick={closeMenu}
-        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 p-4 rounded-md text-sm font-medium"
       >
         Gallery
       </Link>
       <Link
         to="/contact"
         onClick={closeMenu}
-        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 p-4 rounded-md text-sm font-medium"
       >
         Contact
       </Link>
       <Link
         to="/Polices"
         onClick={closeMenu}
+        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 p-4 rounded-md text-sm font-medium"
+      >
+        Polices
         className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
       >
         Polices
@@ -61,6 +66,10 @@ function Navbar() {
   );
 
   return (
+
+    <nav className="bg-white w-full">
+      <div className="mx-auto px-2  lg:px-8">
+        <div className="relative flex items-center justify-between h-16">
     <nav className="bg-white h-24">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-full">
@@ -73,8 +82,8 @@ function Navbar() {
             />
           </div>
           {/* Hamburger Icon (visible on small screens) */}
-          <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-gray-900 hover:text-white focus:outline-none">
+          <div className="md:hidden " >
+            <button onClick={toggleMenu} className="text-gray-900 hover:text-green focus:outline-none">
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
@@ -83,6 +92,12 @@ function Navbar() {
             {navLinks}
           </div>
           {/* Mobile Navigation Menu */}
+<div className={`mobileNavCss w-full absolute top-16 right-0  md:hidden ${isOpen ? 'block' : 'hidden'}`} >
+  <div className="  flex flex-col items-center space-y-4">
+    {navLinks}
+  </div>
+</div>
+
           <div className={`absolute top-full right-0 w-full md:hidden ${isOpen ? 'block' : 'hidden'}`}>
             <div className="bg-gray-700 p-4 flex flex-col items-center space-y-4">
               {navLinks}
