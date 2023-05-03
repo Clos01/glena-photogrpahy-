@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 import logo from '../images/Logo.jpg'; 
 
@@ -22,6 +22,7 @@ function Navbar() {
         to="/"
         onClick={closeMenu}
         className=" mobileNavCss mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium p-4 "
+        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
       >
         Home
       </Link>
@@ -52,18 +53,30 @@ function Navbar() {
         className="mobileNavCss mobilebHover mobileBtn px-3 py-2 p-4 rounded-md text-sm font-medium"
       >
         Polices
+        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+      >
+        Polices
+        to="/services"
+        onClick={closeMenu}
+        className="text-gray-900 hover:bg-[#6bc489d2] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+      >
+        Services
       </Link>
     </>
   );
 
   return (
+
     <nav className="bg-white w-full">
       <div className="mx-auto px-2  lg:px-8">
         <div className="relative flex items-center justify-between h-16">
+    <nav className="bg-white h-24">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="relative flex items-center justify-between h-full">
           <div className="flex-shrink-0 flex items-center">
             {/* LOGO */}
             <img
-              className="h-32 w-32"
+              className="h-24 w-24"
               src={logo}
               alt="logo"
             />
@@ -75,7 +88,7 @@ function Navbar() {
             </button>
           </div>
           {/* Links (visible on larger screens) */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 h-full">
             {navLinks}
           </div>
           {/* Mobile Navigation Menu */}
@@ -85,12 +98,15 @@ function Navbar() {
   </div>
 </div>
 
+          <div className={`absolute top-full right-0 w-full md:hidden ${isOpen ? 'block' : 'hidden'}`}>
+            <div className="bg-gray-700 p-4 flex flex-col items-center space-y-4">
+              {navLinks}
+            </div>
+          </div>
         </div>
       </div>
     </nav>
   );
 }
-
-
 
 export default Navbar;
