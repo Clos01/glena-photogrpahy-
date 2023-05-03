@@ -109,6 +109,7 @@ function Services() {
       },
     ];
   
+    // handle slide changing
     const handleSlideChange = (index) => {
       setCurrentSlide(index);
     };
@@ -176,18 +177,26 @@ function Services() {
           ))}
         </div>
 
+        {/* arrows  */}
         <button
-          className="prev absolute top-1/2 left-0 transform -translate-y-1/2"
-          onClick={goToPreviousSlide}
-        >
-          <FaChevronLeft />
-        </button>
-        <button
-          className="next absolute top-1/2 right-0 transform -translate-y-1/2"
-          onClick={goToNextSlide}
-        >
-          <FaChevronRight />
-        </button>
+  className="prev absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-[-1rem] hidden md:block sm:inline-block"
+  onClick={goToPreviousSlide}
+>
+  <FaChevronLeft />
+</button>
+<button
+  className="next absolute top-1/2 right-0 transform -translate-y-1/2 -translate-x-[-1rem] hidden md:block sm:inline-block"
+  onClick={goToNextSlide}
+>
+  <FaChevronRight />
+</button>
+
+
+
+
+
+
+
       </div>
     </div>
   );
