@@ -38,12 +38,12 @@ function Featured() {
 
   return (
     <>
-      <section className="bg-gradient-to-b from-[#386747d2] to-white ">
+      <section className="bg-gradient-to-b from-[#5aa06ab1] to-white ">
         <div className="text-center py-8">
           <h1 className="txt-height-lg text-white font-bold mt-[4rem]">
             Featured Work
           </h1>
-          <h2 className="text-white text-xl">
+          <h2 className="text-[#0f3649] text-xl">
             Explore a selection of my portfolio.
           </h2>
         </div>

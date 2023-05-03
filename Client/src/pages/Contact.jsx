@@ -1,92 +1,157 @@
-import React, { useState } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import React, { useState } from "react";
+import { FaInstagram } from "react-icons/fa";
+import GlendaInsta from "../images/GlendaInsta.png"
+function ContactForm() {
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+    inquiryType: "",
+  });
 
-function Contact() {
-    const [animateButton, setAnimateButton] = useState(false);
-    const controls = useAnimation();
-  
-    const handleAnimationEnd = () => {
-      setAnimateButton(true);
-      controls.start({ scale: 1.2, transition: { duration: 0.3, yoyo: Infinity } });
-    };
+  const handleChange = (event) => {
+    setFormState({
+      ...formState,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Submit form logic goes here
+    console.log(formState);
+  };
+
   return (
     <>
-  <div
-      name='Contact'
-      className='w-full h-screen flex justify-center items-center pt-30 sm:pt-0 p-35  '
-      style={{
-        backgroundImage: 'linear-gradient(135deg, #62dade, #116467)',
-        backgroundRepeat: 'no-repeat',
-        }}
-        >
-        {/* White box container */}
-        <div className="bg-white shadow-lg rounded-md p-6 max-w-[600px] w-full">
-        <form method='POST' action="https://getform.io/f/07c4747d-9e0c-4efa-8cf7-dfc955885eaa" className='flex flex-col'>
-        <div className='pb-900'>
-        <motion.p
-        className='text-4xl font-bold inline border-b-4 border-[#116467] text-gray-700 shadow-xl'
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
-        >
-        Contact
-        </motion.p>
-        <motion.p
-        className='text-gray-00 py-4'
-        initial={{ x: -50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-        >
-        Submit the form below or shoot me an email - info@gmail.com
-        </motion.p>
+      <div className="flex flex-col md:flex-row justify-center items-center ">
+        <div className="md:w-1/2">
+          <h1 className="text-2xl mb-4 text-center">Get in Contact</h1>
+          <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+            <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-r from-darkBlue via-lightGreen to-darkGreen shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+              <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+                <form onSubmit={handleSubmit}>
+                  <div className="mb-5">
+                    <label className="block text-sm font-medium text-gray-700">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formState.name}
+                      onChange={handleChange}
+                      className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-lightGreen focus:border-lightGreen sm:text-sm"
+                    />
+                  </div>
+                  <div className="mb-5">
+                    <label className="block text-sm font-medium text-gray-700">
+                      Email address
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formState.email}
+                      onChange={handleChange}
+                      className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-lightGreen focus:border-lightGreen sm:text-sm"
+                    />
+                  </div>
+                  <div className="mb-5">
+                    <label className="block text-sm font-medium text-gray-700">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      name="phoneNumber"
+                      value={formState.phoneNumber}
+                      onChange={handleChange}
+                      className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-lightGreen focus:border-lightGreen sm:text-sm"
+                    />
+                  </div>
+                  <div className="mb-5">
+                    <label className="block text-sm font-medium text-gray-700">
+                      Inquiry Type
+                    </label>
+                    <select
+                      name="inquiryType"
+                      value={formState.inquiryType}
+                      onChange={handleChange}
+                      className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-lightGreen focus:border-lightGreen sm:text-sm"
+                    >
+                      <option value="">Select...</option>
+                      <option value="portrait">Portrait Photography</option>
+                      <option value="commercial">Commercial Photography</option>
+                      {/* Add more options as needed */}
+                    </select>
+                  </div>
+                  <div className="mb-5">
+                    <label className="block text-sm font-medium text-gray-700">
+                      Message
+                    </label>
+                    <textarea
+                      name="message"
+                      value={formState.message}
+                      onChange={handleChange}
+                      rows="3"
+                      className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-lightGreen focus:border-lightGreen sm:text-sm"
+                    ></textarea>
+                  </div>
+                  <div>
+                    <button
+                      type="submit"
+                      className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-lightGreen via-darkGreen to-darkBlue  focus:outline-none focus:ring-2 focus:ring-offset-2  focus:darkBlue"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        <motion.input
-        className='bg-[#bfcdc85a] p-2 border border-[#11646737] '
-        type="text"
-        placeholder='Name'
-        name='name'
-        initial={{ x: 50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.4, duration: 0.5 }}
-        />
-        <motion.input
-        className='my-4 p-2 bg-[#bfcdc85a] border border-[#11646737] '
-        type="email"
-        placeholder='Email'
-        name='email'
-        initial={{ x: 50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.6, duration: 0.5 }}
-        />
-        <motion.textarea
-        className='bg-[#bfcdc85a] border border-[#11646737] p-2'
-        name="message"
-        rows="10"
-        placeholder='Message'
-        initial={{ x: 50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.8, duration: 0.5 }}
-        onAnimationComplete={handleAnimationEnd}
-        ></motion.textarea>
-        {animateButton ? (
-        <motion.button
-        className='bg-[#038697] text-white border-2 hover:bg-blue-700 hover:border-blue-700 px-4 py-3 my-8 mx-auto flex items-center'
-        animate={controls}
-        >
-        Contact Me
-        </motion.button>
-        ) : (
-          <button className='bg-[#038697] text-white border-2 hover:bg-blue-700 hover:border-blue-700 px-4 py-3 my-8 mx-auto flex items-center'>Contact Me</button>
-        )}
-        </form>
-        </div>
-        </div>
+        <section>
+  <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
+      <div className="grid p-6 bg-gray-100 rounded place-content-center sm:p-8">
+        <div className="max-w-md mx-auto text-center lg:text-left">
+          <header>
+            <h2 className="text-3xl font-bold text-[#498054c0] sm:text-4xl">Thanks for visiting!</h2>
 
-    
-    
-    
+            <p className="mt-4 text-gray-500 text-lg">
+              If you have any questions or comments, please don't hesitate to get in touch with me.
+            </p>
+          </header>
+        </div>
+      </div>
+
+      <div className="lg:col-span-2 lg:py-8">
+        <ul className="grid grid-cols-2 gap-4 ">
+          <li className="w-[25rem] h-[25rem]">
+            <a href="https://www.instagram.com/glenda.mendez.photography/" className="block group">
+              <img
+                src={GlendaInsta}
+                alt=""
+                className="object-cover w-full h-auto  rounded aspect-square"
+              />
+
+              <div className="mt-3 text-center">
+                <h3 className="text-2xl font-medium text-[#498054] group-hover:underline group-hover:underline-offset-4">
+                  Join me on Instagram
+                </h3>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      </div>
     </>
-  )
+  );
 }
 
-export default Contact
+export default ContactForm;
