@@ -4,7 +4,7 @@ import Glenda from "../images/Glenda.png";
 function About() {
   return (
     <>
-      <section className="bg-[#386747d2] text-white py-12 md:py-16">
+      <section className="bg-[#5aa06ab1] text-white py-12 md:py-16">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="relative">
