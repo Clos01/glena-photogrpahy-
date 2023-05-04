@@ -93,24 +93,27 @@ function Services() {
       ],
     },
     {
-        title: "Travel Fees",
-        content: [
-          { description: "30/30+ minutes", price: "$10" },
-          { description: "1/1+ hour", price: "$25" },
-          { description: "2/2+ hours", price: "$50" },
-          { description: "3/3+ hours", price: "$75" },
-        ],
-      },
-      {
-        title: "Rushed Edit Fees",
-        content: [
-          { description: "If images are needed before 7 business days", price: "$25" },
-        ],
-      },
-    ];
-  
- // handle slide changing
- const handleSlideChange = (index) => {
+      title: "Travel Fees",
+      content: [
+        { description: "30/30+ minutes", price: "$10" },
+        { description: "1/1+ hour", price: "$25" },
+        { description: "2/2+ hours", price: "$50" },
+        { description: "3/3+ hours", price: "$75" },
+      ],
+    },
+    {
+      title: "Rushed Edit Fees",
+      content: [
+        {
+          description: "If images are needed before 7 business days",
+          price: "$25",
+        },
+      ],
+    },
+  ];
+
+  // handle slide changing
+  const handleSlideChange = (index) => {
     setCurrentSlide(index);
   };
 
@@ -131,7 +134,10 @@ function Services() {
           <div className="slide active">
             <div className="p-4 bg-white">
               <div className="flex justify-center flex-col items-center">
-                <h3 className="text-3xl font-bold mb-2" style={{ color: "#88b17e" }}>
+                <h3
+                  className="text-3xl font-bold mb-2"
+                  style={{ color: "#88b17e" }}
+                >
                   {slides[currentSlide].title}
                 </h3>
                 <hr
@@ -146,12 +152,19 @@ function Services() {
                 <div key={index}>
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center">
-                      {currentSlide === slides.length - 2 || currentSlide === slides.length - 1 ? (
-                        <p className="text-gray-700 mt-2 mr-2" style={{ color: "#0f3649" }}>
+                      {currentSlide === slides.length - 2 ||
+                      currentSlide === slides.length - 1 ? (
+                        <p
+                          className="text-gray-700 mt-2 mr-2"
+                          style={{ color: "#0f3649" }}
+                        >
                           {item.description}
                         </p>
                       ) : (
-                        <p className="text-gray-700 mt-2 mr-2" style={{ color: "#0f3649" }}>
+                        <p
+                          className="text-gray-700 mt-2 mr-2"
+                          style={{ color: "#0f3649" }}
+                        >
                           {item.images} images
                         </p>
                       )}
@@ -184,20 +197,26 @@ function Services() {
         </div>
   
         {/* arrows */}
-        <button
-          className="prev absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-[-1rem] hidden md:block sm:inline-block"
-          onClick={goToPreviousSlide}
-        >
-          <FaChevronLeft />
-        </button>
-        <button
-          className="next absolute top-1/2 right-0 transform -translate-y-1/2 -translate-x-[-1rem] hidden md:block sm:inline-block"
-          onClick={goToNextSlide}
-        >
-          <FaChevronRight />
-        </button>
+        <div className="arrows-container flex justify-between">
+  <button
+    className="prev absolute top-1/2 left-10 transform -translate-y-1/2 translate-x-[-1rem] sm:inline-block"
+    onClick={goToPreviousSlide}
+  >
+    <FaChevronLeft />
+  </button>
+  <button
+    className="next absolute top-1/2 right-10 transform -translate-y-1/2 -translate-x-[-1rem] sm:inline-block"
+    onClick={goToNextSlide}
+  >
+    <FaChevronRight />
+  </button>
+</div>
+
+
       </div>
     </div>
   );
-          }  
+  
+  
+}
 export default Services;
