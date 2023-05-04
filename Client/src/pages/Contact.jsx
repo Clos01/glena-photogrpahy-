@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaInstagram } from "react-icons/fa";
 import GlendaInsta from "../images/GlendaInsta.png"
 function ContactForm() {
   const [formState, setFormState] = useState({

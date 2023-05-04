@@ -31,6 +31,18 @@ Dark Green:
 .text-right{
   text-align: right;
 }
+
+
+
+.price-box {
+  background-color: #0f3649;
+  display: inline-block;
+  border-radius: 0.25rem;
+}
+
+.price-box p {
+  margin: 0;
+}
 /* Dark Blue: #0f3649
 Light Green: #88b17e
 Dark Green: #498054 */
