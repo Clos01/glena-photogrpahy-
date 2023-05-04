@@ -109,64 +109,70 @@ function Services() {
       },
     ];
   
-    // handle slide changing
-    const handleSlideChange = (index) => {
-      setCurrentSlide(index);
-    };
-  
-    const goToPreviousSlide = () => {
-      const previousSlide = (currentSlide - 1 + slides.length) % slides.length;
-      setCurrentSlide(previousSlide);
-    };
-  
-    const goToNextSlide = () => {
-      const nextSlide = (currentSlide + 1) % slides.length;
-      setCurrentSlide(nextSlide);
-    };
-  
-    return (
-      <div className="container mx-auto">
-        <div className="relative">
-          <div className="carousel w-full flex justify-center">
-            <div className="slide active">
-              <div className="p-4 bg-white">
-                <div className="flex justify-center">
-                  <h3 className="text-3xl font-bold mb-10" style={{ color: "#88b17e" }}>
-                    {slides[currentSlide].title}
-                  </h3>
-                </div>
-                {slides[currentSlide].content.map((item, index) => (
-                  <div key={index}>
-                    <div className="flex justify-between items-center mb-4">
-                      <div className="flex items-center">
-                        {(currentSlide === slides.length - 2 || currentSlide === slides.length - 1) ? (
-                          <p className="text-gray-700 mt-2 mr-2" style={{ color: "#0f3649" }}>
-                            {item.description}
-                          </p>
-                        ) : (
-                          <p className="text-gray-700 mt-2 mr-2" style={{ color: "#0f3649" }}>
-                            {item.images} images
-                          </p>
-                        )}
-                      </div>
-                      <div className="price-box ml-4">
-                        <p className="text-white px-4 py-1">{item.price}</p>
-                      </div>
-                    </div>
-                    <hr
-                      className="my-4"
-                      style={{
-                        borderTop: "2px solid #88b17e",
-                        marginLeft: "-2rem",
-                        marginRight: "-2rem",
-                      }}
-                    />
-                  </div>
-                ))}
+ // handle slide changing
+ const handleSlideChange = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const goToPreviousSlide = () => {
+    const previousSlide = (currentSlide - 1 + slides.length) % slides.length;
+    setCurrentSlide(previousSlide);
+  };
+
+  const goToNextSlide = () => {
+    const nextSlide = (currentSlide + 1) % slides.length;
+    setCurrentSlide(nextSlide);
+  };
+
+  return (
+    <div className="container mx-auto">
+      <div className="relative">
+        <div className="carousel w-full flex justify-center">
+          <div className="slide active">
+            <div className="p-4 bg-white">
+              <div className="flex justify-center flex-col items-center">
+                <h3 className="text-3xl font-bold mb-2" style={{ color: "#88b17e" }}>
+                  {slides[currentSlide].title}
+                </h3>
+                <hr
+                  className="my-4"
+                  style={{
+                    borderTop: "2px solid #88b17e",
+                    width: "135%",
+                  }}
+                />
               </div>
+              {slides[currentSlide].content.map((item, index) => (
+                <div key={index}>
+                  <div className="flex justify-between items-center mb-4">
+                    <div className="flex items-center">
+                      {currentSlide === slides.length - 2 || currentSlide === slides.length - 1 ? (
+                        <p className="text-gray-700 mt-2 mr-2" style={{ color: "#0f3649" }}>
+                          {item.description}
+                        </p>
+                      ) : (
+                        <p className="text-gray-700 mt-2 mr-2" style={{ color: "#0f3649" }}>
+                          {item.images} images
+                        </p>
+                      )}
+                    </div>
+                    <div className="price-box ml-4">
+                      <p className="text-white px-4 py-1">{item.price}</p>
+                    </div>
+                  </div>
+                  <hr
+                    className="my-4"
+                    style={{
+                      borderTop: "2px solid #88b17e",
+                      marginLeft: "-2rem",
+                      marginRight: "-2rem",
+                    }}
+                  />
+                </div>
+              ))}
             </div>
           </div>
-
+        </div>
         <div className="dots absolute bottom-0 left-0 right-0 flex justify-center">
           {slides.map((_, index) => (
             <button
@@ -176,29 +182,22 @@ function Services() {
             ></button>
           ))}
         </div>
-
-        {/* arrows  */}
+  
+        {/* arrows */}
         <button
-  className="prev absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-[-1rem] hidden md:block sm:inline-block"
-  onClick={goToPreviousSlide}
->
-  <FaChevronLeft />
-</button>
-<button
-  className="next absolute top-1/2 right-0 transform -translate-y-1/2 -translate-x-[-1rem] hidden md:block sm:inline-block"
-  onClick={goToNextSlide}
->
-  <FaChevronRight />
-</button>
-
-
-
-
-
-
-
+          className="prev absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-[-1rem] hidden md:block sm:inline-block"
+          onClick={goToPreviousSlide}
+        >
+          <FaChevronLeft />
+        </button>
+        <button
+          className="next absolute top-1/2 right-0 transform -translate-y-1/2 -translate-x-[-1rem] hidden md:block sm:inline-block"
+          onClick={goToNextSlide}
+        >
+          <FaChevronRight />
+        </button>
       </div>
     </div>
   );
-          }
+          }  
 export default Services;
