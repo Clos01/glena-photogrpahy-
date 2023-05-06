@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
    <>
-    <footer className="bg-white mt-8 pt-8 border-gray-300 shadow-inner" style={{ height: '10rem', position: 'fixed', bottom: 0 }}>
+    <footer className="bg-white mt-8 pt-8 border-gray-300 shadow-inner" style={{ height: "300px" }}>
       <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 p-4 sm:p-8">
         <img
           src="https://images.unsplash.com/photo-1642370324100-324b21fab3a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80"
@@ -50,5 +50,6 @@ function Footer() {
    </>
   )
 }
+
 
 export default Footer;
