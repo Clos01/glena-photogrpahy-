@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FaInstagram } from "react-icons/fa";
+import GlendaInsta from "../images/GlendaInsta.png";
 import GlendaInsta from "../images/GlendaInsta.png"
 function ContactForm() {
   const [formState, setFormState] = useState({
@@ -24,13 +26,13 @@ function ContactForm() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-center items-center ">
-        <div className="md:w-1/2">
-          <h1 className="text-2xl mb-4 text-center">Get in Contact</h1>
-          <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-            <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-darkBlue via-lightGreen to-darkGreen shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-              <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+      <div className="flex flex-col md:flex-row justify-center items-center border-black ">
+      <div className="w-full md:w-2/3 ">
+  <h1 className="text-5xl mt-[2rem]  pb-[3rem] text-center text-[#0f3649]">Get in Contact</h1>
+  <div className=" bg-gray-100  flex flex-col justify-center ">
+    <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+      <div className="absolute inset-0 bg-gradient-to-r from-darkBlue via-lightGreen to-darkGreen shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+      <div className="relative w-full max-w-[30rem] px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20 ">
                 <form onSubmit={handleSubmit}>
                   <div className="mb-5">
                     <label className="block text-sm font-medium text-gray-700">
@@ -110,44 +112,49 @@ function ContactForm() {
           </div>
         </div>
         <section>
-  <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
-      <div className="grid p-6 bg-gray-100 rounded place-content-center sm:p-8">
-        <div className="max-w-md mx-auto text-center lg:text-left">
-          <header>
-            <h2 className="text-3xl font-bold text-[#498054c0] sm:text-4xl">Thanks for visiting!</h2>
+          <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
+              <div className="grid p-6 bg-gray-100 rounded place-content-center sm:p-8">
+                <div className="max-w-md mx-auto text-center lg:text-left">
+                  <header className="lg:w-[15rem]  text-left   ">
+                    <h2 className="text-3xl font-bold text-[#498054c0] sm:text-4xl ">
+                      Thanks for visiting!
+                    </h2>
 
-            <p className="mt-4 text-gray-500 text-lg">
-              If you have any questions or comments, please don't hesitate to get in touch with me.
-            </p>
-          </header>
-        </div>
-      </div>
-
-      <div className="lg:col-span-2 lg:py-8">
-        <ul className="grid grid-cols-2 gap-4 ">
-          <li className="w-[25rem] h-[25rem]">
-            <a href="https://www.instagram.com/glenda.mendez.photography/" className="block group">
-              <img
-                src={GlendaInsta}
-                alt=""
-                className="object-cover w-full h-auto  rounded aspect-square"
-              />
-
-              <div className="mt-3 text-center">
-                <h3 className="text-2xl font-medium text-[#498054] group-hover:underline group-hover:underline-offset-4">
-                  Join me on Instagram
-                </h3>
+                    <p className=" text-gray-500 text-lg mt-5 ">
+                      If you have any questions or concerns, please don't
+                      hesitate to get in touch with me.
+                    </p>
+                  </header>
+                </div>
               </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
+              <div className="lg:col-span-2 lg:py-8 w-full">
+  <ul className="grid grid-cols-1 gap-4 w-full">
+    <li className="w-full h-auto object-cover">
+      <a
+        href="https://www.instagram.com/glenda.mendez.photography/"
+        className="block group w-full"
+      >
+        <img
+          src={GlendaInsta}
+          alt=""
+          className="object-cover w-full h-[15rem] rounded aspect-square"
+        />
 
+        <div className="mt-3 text-center">
+          <h3 className="text-2xl font-medium text-[#498054] group-hover:underline group-hover:underline-offset-4 mt-[2rem]">
+            Join me on Instagram
+          </h3>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
