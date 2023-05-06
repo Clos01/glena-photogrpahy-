@@ -13,7 +13,7 @@ function Footer() {
         <div className="col-span-3 grid grid-cols-2 gap-4 sm:gap-8">
           <div>
             <p className="font-medium">Call us</p>
-            <a href="#" className="block text-2xl font-medium">0123456789</a>
+            {/* <a href="#" className="block text-2xl font-medium">0123456789</a> */}
             <ul className="mt-4 space-y-1 text-sm text-gray-700">
               <li>Monday to Friday: 10am - 5pm</li>
               <li>Weekend: 10am - 3pm</li>
@@ -36,9 +36,9 @@ function Footer() {
         <div className="text-center sm:text-right flex flex-wrap justify-between items-center text-xs ">
           <nav>
             <ul className="flex flex-wrap gap-4">
-              <li><a href="#" className="text-gray-500">Terms & Conditions</a></li>
+              {/* <li><a href="#" className="text-gray-500">Terms & Conditions</a></li>
               <li><a href="#" className="text-gray-500">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-500">Cookies</a></li>
+              <li><a href="#" className="text-gray-500">Cookies</a></li> */}
             </ul>
           </nav>
           <p className="mt-4 text-gray-500">

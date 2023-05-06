@@ -1,4 +1,4 @@
-.custom-object-position {
+custom-object-position {
   object-position: 20% 29%;
 }
 .custom-object-scale{
@@ -32,4 +32,42 @@ Dark Green:
 }
 .text-right{
   text-align: right;
+}
+
+
+
+.price-box {
+  background-color: #0f3649;
+  display: inline-block;
+  border-radius: 0.25rem;
+}
+
+.price-box p {
+  margin: 0;
+}
+/* Dark Blue: #0f3649
+Light Green: #88b17e
+Dark Green: #498054 */
+.mobileNavCss{
+  background-color: #0f3649;
+  color:  #88b17e;
+  z-index: 99999;
+  font-size: large;
+   
+}
+.mobilebHover:hover {
+background-color: #498054  ;
+color: #fffdfd;
+}
+.mobileBtn{
+  background-color: #ffffff; /* Green */
+  border: none;
+  text-align: center;
+  display: inline-block;
+  font-size: px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 12px; /* Rounded corners */
 }
