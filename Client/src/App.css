@@ -71,3 +71,8 @@ color: #fffdfd;
   padding: 10px 24px;
   border-radius: 12px; /* Rounded corners */
 }
+
+.PaymentImgs img {
+  width: 55px;
+  height: 55px;
+}

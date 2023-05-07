@@ -8,6 +8,10 @@ import Service from "../Svg/user-check.svg";
 import Bookmark from "../Svg/bookmark.svg";
 import CreditCard from "../Svg/credit-card.svg";
 import DollaSign from "../Svg/dollar-sign.svg";
+import MoneySign from "../images/dollar.png";
+import Venmo from "../images/Venmo.png";
+import ApplePay from "../images/ApplePay.png";
+import Zelle from "../images/Zelle.png";
 function Polices() {
   return (
     <>
@@ -19,10 +23,10 @@ function Polices() {
           className="text-5xl font-bold text-[#498054] tracking-widest uppercase text-center">
             Polices & FAQS
           </h4>
-          <p 
-          className="text-center text-[#0f3649] text-md mt-2">
+          <h2 
+          className="text-center text-[#0f3649] text-lg mt-2">
             Here are some of the frequently asked questions
-          </p>
+          </h2>
           <div 
           className="grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-12 px-2 xl:px-12 mt-4 text-center">
             <div 
@@ -138,7 +142,7 @@ function Polices() {
                   $50 deposit fee to secure session date. The deposit will be
                   applied towards the session fee. For mini sessions the $50
                   deposit fee is in addition to packages shown in pricing guide.
-                  This guarantees the time and date allotted for vou.
+                  This guarantees the time and date allotted for you.
                 </p>
               </div>
             </div>
@@ -164,30 +168,26 @@ function Polices() {
               </div>
             </div>
 
-            <div 
-            className="flex  space-x-2 mt-8">
-              <div>
-                <div className="App">
-                  <ReactSVG src={DollaSign} />
-                </div>
-              </div>
-              <div 
-              className="text-center ">
-                <h4 
-                className="text-xl font-bold text-gray-700">
-                   FAQ: Payment Options?
-                </h4>
-                <p 
-                className="text-gray-600 my-2">
-                  We offer multiple convenient payment options, including cash,
-                  Venmo, Apple Pay, and Zelle. Whether you prefer to pay with
-                  traditional cash or utilize modern digital platforms, we
-                  strive to provide flexibility to customers. With these
-                  options, you can choose the method that works best for you,
-                  making the payment process hassle-free and efficient."
-                </p>
-              </div>
-            </div>
+            <div className="flex space-x-8 mt-8">
+  <div className="App">
+    <ReactSVG src={DollaSign} />
+  </div>
+  <div className="text-center">
+    <h4 className="text-xl font-bold text-gray-700">FAQ: Payment Options?</h4>
+    <p className="PaymentImgs">
+      You can choose to pay with Cash,Venmo,ApplePay and Zelle.
+    </p>
+    <div className="PaymentImgs flex justify-center items-center space-x-10 mt-2 ">
+  <img src={MoneySign} alt="Cash" /> 
+  <img src={Venmo} alt="Venmo" />
+  <img src={ApplePay} alt="Apple Pay" />
+  <img src={Zelle} alt="Zelle" />
+</div>
+
+  </div>
+</div>
+
+
           </div>
         </div>
       </div>
