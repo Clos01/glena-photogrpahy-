@@ -27,7 +27,7 @@ function ContactForm() {
       <div className="flex flex-col md:flex-row justify-center items-center border-black ">
       <div className="w-full md:w-2/3 ">
   <h1 className="text-5xl mt-[2rem]  pb-[3rem] text-center text-[#0f3649]">Get in Contact</h1>
-  <div className=" bg-gray-100  flex flex-col justify-center ">
+  <div className="  flex flex-col justify-center ">
     <div className="relative py-3 sm:max-w-xl sm:mx-auto">
       <div className="absolute inset-0 bg-gradient-to-r from-darkBlue via-lightGreen to-darkGreen shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
       <div className="relative w-full max-w-[30rem] px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20 ">
@@ -112,7 +112,7 @@ function ContactForm() {
         <section>
           <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
-              <div className="grid p-6 bg-gray-100 rounded place-content-center sm:p-8">
+              <div className="grid p-2 rounded place-content-center sm:p-8">
                 <div className="max-w-md mx-auto text-center lg:text-left">
                   <header className="lg:w-[15rem]  text-left   ">
                     <h2 className="text-3xl font-bold text-[#498054c0] sm:text-4xl ">
