@@ -141,7 +141,7 @@ function ContactForm() {
                             <div className="lg:col-span-2 lg:py-8 w-full">
                                 <ul className="grid grid-cols-1 gap-4 w-full">
                                     <li className="w-full h-auto object-cover">
-                                        <a href="https://www.instagram.com/glenda.mendez.photography/" className="block group w-full">
+                                        <a href="https://www.instagram.com/glenda.mendez.photography/" target="_blank" className="block group w-full">
                                             <img src={GlendaInsta} alt="" className="object-cover w-full h-[15rem] rounded aspect-square" />
                                             <div className="mt-3 text-center">
                                                 <h3 className="text-2xl font-medium text-[#498054] group-hover:underline group-hover:underline-offset-4 mt-[2rem]">
