@@ -79,6 +79,11 @@ color: #fffdfd;
   width: 55px;
   height: 55px;
 }
+.PaymentImgs img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
 .custom-object-position {
   object-fit: cover;
   object-position: 50% 28%; /* Adjust these values as per your need */

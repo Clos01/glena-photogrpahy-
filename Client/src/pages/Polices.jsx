@@ -1,4 +1,5 @@
 import React from "react";
+import { useSpring, animated } from 'react-spring';
 import { ReactSVG } from "react-svg";
 import Calendar from "../Svg/Calendar.svg";
 import xsquare from "../Svg/x-square.svg";
@@ -13,8 +14,12 @@ import Venmo from "../images/Venmo.png";
 import ApplePay from "../images/ApplePay.png";
 import Zelle from "../images/Zelle.png";
 function Polices() {
+  const fadeIn = useSpring({ opacity: 1, from: { opacity: 0 }, delay: 300 });
+
   return (
     <>
+  <animated.div style={fadeIn}>
+ 
       <div className="p-8">
         <div className="bg-white p-4 rounded-lg shadow-xl py-8 mt-12">
           <h4 className="text-5xl font-bold text-[#498054] tracking-widest uppercase text-center">
@@ -173,6 +178,7 @@ function Polices() {
           </div>
         </div>
       </div>
+      </animated.div>
     </>
   );
 }
