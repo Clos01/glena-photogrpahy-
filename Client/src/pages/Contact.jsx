@@ -142,7 +142,7 @@ function ContactForm() {
                                 <ul className="grid grid-cols-1 gap-4 w-full">
                                     <li className="w-full h-auto object-cover">
                                         <a href="https://www.instagram.com/glenda.mendez.photography/" target="_blank" rel="noopener noreferrer" className="block group w-full">
-                                            <img src={GlendaInsta} alt="" className="object-cover w-full h-[15rem] rounded aspect-square" />
+                                            <img src={GlendaInsta} alt="img for insta" className="object-cover w-full h-[15rem] rounded aspect-square" />
                                             <div className="mt-3 text-center">
                                                 <h3 className="text-2xl font-medium text-[#498054] group-hover:underline group-hover:underline-offset-4 mt-[2rem]">
                                                     Follow my Instagram 😁
