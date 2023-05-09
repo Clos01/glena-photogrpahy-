@@ -48,13 +48,7 @@ Dark Green:
 /* Dark Blue: #0f3649
 Light Green: #88b17e
 Dark Green: #498054 */
-.mobileNavCss{
-  background-color: #0f3649;
-  color:  #88b17e;
-  z-index: 99999;
-  font-size: large;
-   
-}
+
 .mobilebHover:hover {
 background-color: #498054  ;
 color: #fffdfd;
@@ -65,9 +59,18 @@ color: #fffdfd;
   text-align: center;
   display: inline-block;
   font-size: px;
-  margin: 4px 2px;
+  margin: 20px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  padding: 10px 24px;
+  padding: 20px 24px;
   border-radius: 12px; /* Rounded corners */
+}
+.mobileNavLink {
+  width: 30%;
+  display: block;
+}
+@media only screen and (max-width: 767px) {
+  .mobileNavLink {
+    background-color:  #0f3649;
+  }
 }
