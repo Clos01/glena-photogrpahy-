@@ -51,7 +51,7 @@ Dark Green: #498054 */
 
 .mobilebHover:hover {
 background-color: #498054  ;
-color: #fffdfd;
+color: #e9e9e9;
 }
 .mobileBtn{
   background-color: #ffffff; /* Green */
@@ -71,6 +71,32 @@ color: #fffdfd;
 }
 @media only screen and (max-width: 767px) {
   .mobileNavLink {
-    background-color:  #0f3649;
+    background-color:  #489a6c;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+ 
+    padding: 10px 15px;
+    border-radius: 5px;
+
   }
+
+  .mobileNavLink:hover {
+    background-color: #2d6e4d;
+    /* Change background color on hover */
+  }
+}
+
+
+.PaymentImgs img {
+  width: 55px;
+  height: 55px;
+}
+.PaymentImgs img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.custom-object-position {
+  object-fit: cover;
+  object-position: 50% 28%; /* Adjust these values as per your need */
 }
