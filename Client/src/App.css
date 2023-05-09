@@ -1,6 +1,102 @@
-.custom-object-position {
+custom-object-position {
   object-position: 20% 29%;
 }
 .custom-object-scale{
   transform: scale(1);
+}
+@media (min-width: 1024px){
+  .lg-bg-container {
+  border-radius: 10%;
+  overflow: hidden; /* Hide the content that overflows the oval shape */
+ padding-left: 100px;
+ padding-right: 100px;
+}
+}
+
+
+/* Dark Blue: 
+#0f3649
+Light Green: 
+#498054c0
+Dark Green: 
+#498054 */
+
+.Bg-container img {
+  padding: 8px; /* Adjust the padding as needed */
+}
+.txt-height-lg{
+  font-size: 4rem;
+}
+.image-shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur, color */
+}
+.text-right{
+  text-align: right;
+}
+
+
+
+.price-box {
+  background-color: #0f3649;
+  display: inline-block;
+  border-radius: 0.25rem;
+}
+
+.price-box p {
+  margin: 0;
+}
+/* Dark Blue: #0f3649
+Light Green: #88b17e
+Dark Green: #498054 */
+
+.mobilebHover:hover {
+background-color: #498054  ;
+color: #e9e9e9;
+}
+.mobileBtn{
+  background-color: #ffffff; /* Green */
+  border: none;
+  text-align: center;
+  display: inline-block;
+  font-size: px;
+  margin: 20px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  padding: 20px 24px;
+  border-radius: 12px; /* Rounded corners */
+}
+.mobileNavLink {
+  width: 30%;
+  display: block;
+}
+@media only screen and (max-width: 767px) {
+  .mobileNavLink {
+    background-color:  #489a6c;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+ 
+    padding: 10px 15px;
+    border-radius: 5px;
+
+  }
+
+  .mobileNavLink:hover {
+    background-color: #2d6e4d;
+    /* Change background color on hover */
+  }
+}
+
+
+.PaymentImgs img {
+  width: 55px;
+  height: 55px;
+}
+.PaymentImgs img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.custom-object-position {
+  object-fit: cover;
+  object-position: 50% 28%; /* Adjust these values as per your need */
 }

@@ -1,12 +1,14 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaInstagram, FaBars, FaTimes } from 'react-icons/fa';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import logo from "../images/Logo.jpg";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    console.log("Menu toggled, isOpen = ", isOpen);
   };
 
   const closeMenu = () => {
@@ -18,71 +20,85 @@ function Navbar() {
       <Link
         to="/"
         onClick={closeMenu}
-        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className="mobileNavLink mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
       >
         Home
       </Link>
       <Link
+        to="/about"
+        onClick={closeMenu}
+        className="mobileNavLink mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium  text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
+      >
+        About
+      </Link>
+      <Link
         to="/gallery"
         onClick={closeMenu}
-        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className="mobileNavLink mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium  text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
       >
         Gallery
       </Link>
       <Link
         to="/contact"
         onClick={closeMenu}
-        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+        className="mobileNavLink mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium  text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
       >
         Contact
       </Link>
-      <a
-        href="https://www.instagram.com"
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        to="/polices"
         onClick={closeMenu}
-        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center justify-center"
+        className="mobileNavLink mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
       >
-        <FaInstagram className="mr-2" />
-        <span>Instagram</span>
-      </a>
+        Polices
+      </Link>
+      <Link
+        to="/services"
+        onClick={closeMenu}
+        className="mobileNavLink mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
+      >
+        Services
+      </Link>
     </>
   );
 
   return (
-    <nav className="bg-gray-800">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px8">
-        <div className="relative flex items-center justify-between h-16">
+    <nav className="bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="relative flex items-center justify-between h-22">
           <div className="flex-shrink-0 flex items-center">
-            {/* LOGO */}
-            <img
-              className="h-8 w-8"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-              alt="logo"
-            />
+            <img className="h-22 w-24" src={logo} alt="logo" />
           </div>
-          {/* Hamburger Icon (visible on small screens) */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-gray-300 hover:text-white focus:outline-none">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-900 hover:text-green focus:outline-none"
+            >
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
-          {/* Links (visible on larger screens) */}
-          <div className="hidden md:flex space-x-8">
-            {navLinks}
-          </div>
-          {/* Mobile Navigation Menu */}
-          <div className={`absolute top-16 right-0 w-full md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-            <div className="bg-gray-700 p-4 flex flex-col items-center space-y-4">
-              {navLinks}
+          <div className="hidden md:flex space-x-8">{navLinks}</div>
+          {isOpen && (
+            <div className="fixed top-0 left-0 w-full h-full bg-[#faf9f9] z-50 md:hidden">
+              <div className="absolute top-0 right-0 pt-4 pr-4">
+                <button
+                  onClick={closeMenu}
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
+                >
+                  <FaTimes />
+                </button>
+              </div>
+              <div className="flex flex-col items-center justify-center mt-[2%]">
+                {navLinks}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </nav>
   );
+  
+  
 }
-
-
 
 export default Navbar;
