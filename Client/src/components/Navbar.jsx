@@ -79,7 +79,7 @@ function Navbar() {
           </div>
           <div className="hidden md:flex space-x-8">{navLinks}</div>
           {isOpen && (
-            <div className="fixed top-0 left-0 w-full h-full bg-[#88b17e] z-50 md:hidden">
+            <div className="fixed top-0 left-0 w-full h-full bg-[#faf9f9] z-50 md:hidden">
               <div className="absolute top-0 right-0 pt-4 pr-4">
                 <button
                   onClick={closeMenu}
@@ -88,7 +88,7 @@ function Navbar() {
                   <FaTimes />
                 </button>
               </div>
-              <div className="flex flex-col items-center justify-center h-full">
+              <div className="flex flex-col items-center justify-center mt-[2%]">
                 {navLinks}
               </div>
             </div>
