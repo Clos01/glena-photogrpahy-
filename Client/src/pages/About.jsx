@@ -1,21 +1,22 @@
 import React from "react";
 import Glenda from "../images/Glenda.png";
+
 function About() {
   return (
     <>
-      <section className="bg-white text-[#0f3649] py-12 md:py-16">
+      <section className="bg-[#e8e4e4b2] text-[#0f3649] py-12 md:py-16">
         <div className="container mx-auto lg:px-4 md:p-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-center md:flex md:justify-center sm:grid-cols-1 sm:items-center">
             <div className="relative">
               <img
-                className="w-96 h-96 lg:h-[40rem] shadow-lg object-cover mx-auto max-w-md lg:max-w-none"
+                className="w-96 h-96 lg:h-[40rem] shadow-lg object-cover mx-auto max-w-md lg:max-w-none rounded-lg"
                 src={Glenda}
-                alt="Glenda"
+                alt="Portrait of Glenda, the photographer"
               />
             </div>
 
             {/* container holds img & text */}
-            <div className="space-y-6 text-center max-w-lg">
+            <div className="space-y-6 text-left md:text-center max-w-lg">
               <h2 className="text-4xl md:text-5xl font-semibold text-theme-title uppercase">
                 About Me
               </h2>

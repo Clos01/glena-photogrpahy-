@@ -79,3 +79,7 @@ color: #fffdfd;
   width: 55px;
   height: 55px;
 }
+.custom-object-position {
+  object-fit: cover;
+  object-position: 50% 28%; /* Adjust these values as per your need */
+}

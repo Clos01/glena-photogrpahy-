@@ -7,11 +7,12 @@ function Hero() {
       <div className="relative h-[600px]">
         {/* Background image with transparent overlay */}
         <div className="absolute inset-0">
-          <img
-            className="w-full h-full object-cover custom-object-position custom-object-scale" // Use object-center to center the face
-            src={glenda}
-            alt="Background"
-          />
+        <img
+  className="w-full h-full object-cover object-center custom-object-position custom-object-scale"
+  src={glenda}
+  alt="Background"
+/>
+
           <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-50"></div>
         </div>
 
