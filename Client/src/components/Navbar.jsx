@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from '../images/Logo.jpg';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import logo from "../images/Logo.jpg";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    console.log('Menu toggled, isOpen = ', isOpen);
+    console.log("Menu toggled, isOpen = ", isOpen);
   };
 
   const closeMenu = () => {
@@ -20,42 +20,42 @@ function Navbar() {
       <Link
         to="/"
         onClick={closeMenu}
-        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
+        className="mobileNavLink mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
       >
         Home
       </Link>
       <Link
-        to="/About"
+        to="/about"
         onClick={closeMenu}
-        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium"
+        className="mobileNavLink mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium  text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
       >
         About
       </Link>
       <Link
         to="/gallery"
         onClick={closeMenu}
-        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium"
+        className="mobileNavLink mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium  text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
       >
         Gallery
       </Link>
       <Link
         to="/contact"
         onClick={closeMenu}
-        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium"
+        className="mobileNavLink mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium  text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
       >
         Contact
       </Link>
       <Link
-        to="/Polices"
+        to="/polices"
         onClick={closeMenu}
-        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
+        className="mobileNavLink mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
       >
         Polices
       </Link>
       <Link
         to="/services"
         onClick={closeMenu}
-        className="mobileNavCss mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
+        className="mobileNavLink mobilebHover mobileBtn px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
       >
         Services
       </Link>
@@ -70,22 +70,35 @@ function Navbar() {
             <img className="h-24 w-24" src={logo} alt="logo" />
           </div>
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-gray-900 hover:text-green focus:outline-none">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-900 hover:text-green focus:outline-none"
+            >
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
-          <div className="hidden md:flex space-x-8">
-            {navLinks}
-          </div>
-          <div className={`mobileNavCss w-full absolute top-16 right-0 md:hidden ${isOpen ? 'block' : 'hidden'}`}>
-            <div className="flex flex-col items-center space-y-4">
-              {navLinks}
+          <div className="hidden md:flex space-x-8">{navLinks}</div>
+          {isOpen && (
+            <div className="fixed top-0 left-0 w-full h-full bg-[#88b17e] z-50 md:hidden">
+              <div className="absolute top-0 right-0 pt-4 pr-4">
+                <button
+                  onClick={closeMenu}
+                  className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-[#6bc489d2] hover:text-white"
+                >
+                  <FaTimes />
+                </button>
+              </div>
+              <div className="flex flex-col items-center justify-center h-full">
+                {navLinks}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </nav>
   );
+  
+  
 }
 
 export default Navbar;

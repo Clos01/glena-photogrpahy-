@@ -3,34 +3,34 @@ import Glenda from "../images/Glenda.png";
 function About() {
   return (
     <>
-      <section className="bg-[#5aa06ab1] text-white py-12 md:py-16">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <section className="bg-white text-[#0f3649] py-12 md:py-16">
+        <div className="container mx-auto lg:px-4 md:p-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-center md:flex md:justify-center sm:grid-cols-1 sm:items-center">
             <div className="relative">
               <img
-                className="w-full h-full lg:h-[38rem] rounded-xl shadow-lg object-cover"
+                className="w-96 h-96 lg:h-[40rem] shadow-lg object-cover mx-auto max-w-md lg:max-w-none"
                 src={Glenda}
                 alt="Glenda"
               />
             </div>
 
-            <div className="space-y-6">
-              <h2
-                className="text-4xl md:text-5xl font-semibold text-theme-title uppercase"
-                alt=""
-              >
-                What do I do?
+            {/* container holds img & text */}
+            <div className="space-y-6 text-center max-w-lg">
+              <h2 className="text-4xl md:text-5xl font-semibold text-theme-title uppercase">
+                About Me
               </h2>
-
               <p className="text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing
+                As a photographer, I strive to capture the beauty and uniqueness
+                of the world around me. With my camera in hand, I'm always
+                seeking out new perspectives and angles, looking for the perfect
+                shot that tells a story or captures a moment in time.
               </p>
-
               <div className="text-lg">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                officiis, adipisci, quisquam distinctio accusamus nostrum eveniet
-                maxime, id vitae quibusdam aliquam reprehenderit tenetur
-                recusandae impedit ipsa minus facere commodi magni!
+                I believe that photography has the power to move and inspire
+                people, to bring them closer to the world and to each other.
+                Through my work, I hope to share my love of photography with
+                others and to encourage them to see the world in a new and
+                exciting way.
               </div>
             </div>
           </div>
