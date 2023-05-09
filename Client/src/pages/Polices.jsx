@@ -29,8 +29,8 @@ function Polices() {
             Here are some of the frequently asked questions
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 xl:gap-12 px-2 xl:px-12 mt-4 text-center">
-            <div className="flex space-x-8 mt-8">
-              <div className="App">
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-8">
+  <div className="App self-center md:self-auto">
                 <ReactSVG src={Calendar} />
               </div>
               <div>
@@ -46,8 +46,8 @@ function Polices() {
               </div>
             </div>
 
-            <div className="flex space-x-8 mt-8">
-              <div className="App">
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-8">
+  <div className="App self-center md:self-auto">
                 <ReactSVG src={xsquare} />
               </div>
               <div>
@@ -59,8 +59,8 @@ function Polices() {
               </div>
             </div>
 
-            <div className="flex space-x-8 mt-8">
-              <div className="App">
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-8">
+  <div className="App self-center md:self-auto">
                 <ReactSVG src={camera} />
               </div>
               <div>
@@ -76,8 +76,8 @@ function Polices() {
               </div>
             </div>
 
-            <div className="flex space-x-8 mt-8">
-              <div className="App">
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-8">
+  <div className="App self-center md:self-auto">
                 <ReactSVG src={Refresh} />
               </div>
               <div>
@@ -91,9 +91,9 @@ function Polices() {
               </div>
             </div>
 
-            <div className="flex space-x-8 mt-8">
-              <div>
-                <div className="App">
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-8">
+  <div className="App self-center md:self-auto">
+                <div className="">
                   <ReactSVG src={Service} />
                 </div>
               </div>
@@ -112,9 +112,9 @@ function Polices() {
               </div>
             </div>
 
-            <div className="flex space-x-8 mt-8">
-              <div>
-                <div className="App">
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-8">
+  <div className="App self-center md:self-auto">
+                <div className="">
                   <ReactSVG src={Bookmark} />
                 </div>
               </div>
@@ -132,8 +132,8 @@ function Polices() {
               </div>
             </div>
 
-            <div className="flex space-x-8 mt-8">
-              <div className="App">
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-8">
+  <div className="App self-center md:self-auto">
                 <ReactSVG src={CreditCard} />
               </div>
               <div>
@@ -153,8 +153,8 @@ function Polices() {
               </div>
             </div>
 
-            <div className="flex space-x-8 mt-8">
-              <div className="App">
+            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 mt-8">
+  <div className="App self-center md:self-auto">
                 <ReactSVG src={DollaSign} />
               </div>
               <div className="text-center">
