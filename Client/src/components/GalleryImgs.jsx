@@ -1,5 +1,4 @@
-import React, { useState, useCallback } from "react";
-import Gallery from "react-photo-gallery";
+import React, { useState } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Art from "../images/ArtMuesuem.jpg";
 import BlueDress from "../images/BlueDress.jpg";
@@ -7,7 +6,6 @@ import Dillion from "../images/Dillon.jpg";
 import Downtown from "../images/Downtown.jpg";
 import FlowerShoot from "../images/Flowersesh.jpg";
 import HeadShot from "../images/HeadShot.jpg";
-import { a as animated, useSpring } from '@react-spring/web';
 
 
 
