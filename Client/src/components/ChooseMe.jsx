@@ -1,5 +1,5 @@
 import React from "react";
-import { useSpring, animated } from "react-spring";
+import { a as animated, useSpring } from '@react-spring/web';
 import icon1 from "../images/icon1.png";
 import icon2 from "../images/icon2.png";
 import icon3 from "../images/icon3.png";
@@ -31,8 +31,10 @@ function Card({ title, description, icon }) {
     to: { opacity: 1, transform: "scale(1)" },
   });
 
+  const AnimatedDiv = animated('div');
+
   return (
-    <animated.div
+    <AnimatedDiv
       style={{ ...animation, width: "90%", margin: "0 auto" }}
       className="bg-white p-8 rounded-lg shadow-md mb-8 min-h-96"
     >
@@ -44,9 +46,10 @@ function Card({ title, description, icon }) {
 
       <h2 className="text-2xl font-bold mb-2 md:mb-4 text-center">{title}</h2>
       <p className="text-gray-600 text-center mb-4">{description}</p>
-    </animated.div>
+    </AnimatedDiv>
   );
 }
+
 
 function CardsSection() {
   return (

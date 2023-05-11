@@ -1,4 +1,5 @@
-import { Route, Routes } from 'react-router-dom'; 
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 import "./App.css"
 import Navbar from "./components/Navbar";
 import Home from './pages/Home';
@@ -17,21 +18,22 @@ function App() {
     
     <Navbar />
     
-    <Routes>
+    <Switch>
 
-      <Route path='/' element={<Home />} />
-      <Route path='/About' element={<About />} />
-      <Route path='/Contact' element={<Contact />} />
-      <Route path='/Polices' element={<Polices />} />
-      <Route path='/Services' element={<Services />} />
-      <Route path='/Gallery' element={<Gallery />} />
-    </Routes>
+      <Route exact path='/' component={Home} />
+      <Route path='/About' component={About} />
+      <Route path='/Contact' component={Contact} />
+      <Route path='/Polices' component={Polices} />
+      <Route path='/Services' component={Services} />
+      <Route path='/Gallery' component={Gallery} />
+
+    </Switch>
+
     <Footer/>
     
     </>
   )
 
-
 }
 
-export default App; 
+export default App;
