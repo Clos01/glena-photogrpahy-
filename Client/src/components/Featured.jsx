@@ -1,35 +1,40 @@
 import React from "react";
 import Glenda from "../images/Glenda.png";
-
+import Art from "../images/ArtMuesuem.jpg";
+import BlueDress from "../images/BlueDress.jpg";
+import Dillion from "..//images/Dillon.jpg";
+import Downtown from "../images/Downtown.jpg";
+import FlowerShoot from "../images/Flowersesh.jpg";
+import HeadShot from "../images/HeadShot.jpg";
 function Featured() {
   const projects = [
     {
-      image: Glenda,
+      image:  Art,
       title: "Project 1",
       description: "A brief description of Project 1",
     },
     {
-      image: Glenda,
+      image: BlueDress,
       title: "Project 2",
       description: "A brief description of Project 2",
     },
     {
-      image: Glenda,
+      image: Dillion,
       title: "Project 2",
       description: "A brief description of Project 2",
     },
     {
-      image: Glenda,
+      image:  Downtown,
       title: "Project 2",
       description: "A brief description of Project 2",
     },
     {
-      image: Glenda,
+      image: FlowerShoot,
       title: "Project 2",
       description: "A brief description of Project 2",
     },
     {
-      image: Glenda,
+      image: HeadShot,
       title: "Project 2",
       description: "A brief description of Project 2",
     },
@@ -56,11 +61,12 @@ function Featured() {
               {projects.map((project, index) => (
                 <div key={index} className="p-4">
                   <div className="image-shadow bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 text-center">
-                    <img
-                      className="w-full h-60 md:h-[25rem] object-cover "
-                      src={project.image}
-                      alt="Card"
-                    />
+                  <img
+  className="w-full h-[30rem] sm:h-[15rem] md:h-[20rem] lg:h-[30rem] object-cover"
+  src={project.image}
+  alt="Card"
+/>
+
                
                   </div>
                 </div>

@@ -7,6 +7,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Polices from './pages/Polices';
 import Services from './pages/Services';
+import Gallery from './pages/Gallery';
 
 function App() {
 
@@ -23,7 +24,7 @@ function App() {
       <Route path='/Contact' element={<Contact />} />
       <Route path='/Polices' element={<Polices />} />
       <Route path='/Services' element={<Services />} />
-
+      <Route path='/Gallery' element={<Gallery />} />
     </Routes>
     <Footer/>
     

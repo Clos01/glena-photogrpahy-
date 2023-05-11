@@ -37,8 +37,8 @@ function ContactForm() {
 
   return (
     <>
-     <div className="flex flex-col md:flex-row justify-center items-center border-black ">
-            <animated.div style={formAnimation} className="w-full md:w-1/3 ">
+      <div className="flex flex-col md:flex-row justify-center items-center border-black ">
+            <animated.div style={formAnimation} className="w-full md:w-1/2 lg:w-1/3">
                 <h1 className="text-5xl mt-[2rem]  pb-[3rem] text-center text-[#0f3649]">Get in Contact</h1>
                 <div className="flex flex-col justify-center ">
                     <div className="relative py-3 sm:max-w-xl sm:mx-auto">
@@ -122,7 +122,7 @@ function ContactForm() {
                     </div>
                 </div>
             </animated.div>
-            <animated.div style={instaAnimation}>
+            <animated.div style={instaAnimation} className="md:w-1/2 lg:w-1/3">
                 <section>
                     <div className="max-w-screen-xl px-4 py-8 mx-auto sm:py-12 sm:px-6 lg:px-8">
                         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:items-stretch">
@@ -141,8 +141,8 @@ function ContactForm() {
                             <div className="lg:col-span-2 lg:py-8 w-full">
                                 <ul className="grid grid-cols-1 gap-4 w-full">
                                     <li className="w-full h-auto object-cover">
-                                        <a href="https://www.instagram.com/glenda.mendez.photography/" target="_blank" className="block group w-full">
-                                            <img src={GlendaInsta} alt="" className="object-cover w-full h-[15rem] rounded aspect-square" />
+                                        <a href="https://www.instagram.com/glenda.mendez.photography/" target="_blank" rel="noopener noreferrer" className="block group w-full">
+                                            <img src={GlendaInsta} alt="img for insta" className="object-cover w-full h-[15rem] rounded aspect-square" />
                                             <div className="mt-3 text-center">
                                                 <h3 className="text-2xl font-medium text-[#498054] group-hover:underline group-hover:underline-offset-4 mt-[2rem]">
                                                     Follow my Instagram 😁
