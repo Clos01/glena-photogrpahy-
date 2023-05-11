@@ -1,5 +1,4 @@
-import React, { useState, useCallback } from "react";
-import Gallery from "react-photo-gallery";
+import React, { useState } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Art from "../images/ArtMuesuem.jpg";
 import BlueDress from "../images/BlueDress.jpg";
@@ -48,30 +47,30 @@ function Featured() {
   };
 
   return (
-    <div className="  p-4 bg-gray-200 grid grid-cols-3 ">
-      {photos.map((photo, index) => (
-        <img
-          key={index}
-          src={photo.src}
-          alt={photo.title}
-          onClick={() => openLightbox(index)}
-          className="GalleyImgs transform transition duration-200 ease-in-out hover:scale-100 hover:opacity-80"
-        />
-      ))}
-      <ModalGateway>
-        {viewerIsOpen ? (
-          <Modal onClose={closeLightbox}>
-            <Carousel
-              currentIndex={currentImage}
-              views={photos.map((x) => ({
-                src: x.src,
-                caption: x.title,
-              }))}
-            />
-          </Modal>
-        ) : null}
-      </ModalGateway>
-    </div>
+    <div className="p-4 bg-gray-200 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {photos.map((photo, index) => (
+      <img
+        key={index}
+        src={photo.src}
+        alt={photo.title}
+        onClick={() => openLightbox(index)}
+        className="GalleyImgs transform transition duration-200 ease-in-out hover:scale-100 hover:opacity-80"
+      />
+    ))}
+    <ModalGateway>
+      {viewerIsOpen ? (
+        <Modal onClose={closeLightbox}>
+          <Carousel
+            currentIndex={currentImage}
+            views={photos.map((x) => ({
+              src: x.src,
+              caption: x.title,
+            }))}
+          />
+        </Modal>
+      ) : null}
+    </ModalGateway>
+  </div>
   );
 }
 

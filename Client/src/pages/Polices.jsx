@@ -1,5 +1,6 @@
 import React from "react";
-import { useSpring, animated } from "react-spring";
+import { a as animated, useSpring } from '@react-spring/web';
+
 import { ReactSVG } from "react-svg";
 import Calendar from "../Svg/Calendar.svg";
 import xsquare from "../Svg/x-square.svg";

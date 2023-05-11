@@ -1,5 +1,4 @@
 import React from "react";
-import Glenda from "../images/Glenda.png";
 import Art from "../images/ArtMuesuem.jpg";
 import BlueDress from "../images/BlueDress.jpg";
 import Dillion from "..//images/Dillon.jpg";
