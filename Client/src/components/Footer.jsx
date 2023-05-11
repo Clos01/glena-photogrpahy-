@@ -37,7 +37,6 @@ function Footer() {
           <div className="flex flex-col justify-start  lg:pl-8 md:w-1/2">
             <p className="font-medium text-lg md:text-2xl mt-4 md:mt-0">Office Hours</p>
             <ul className="mt-4 text-xs md:text-sm text-gray-700">
-              <li className='py-2'><span className='text-md md:text-lg font-bold'>Monday to Friday:</span></li>
               <li className='py-2'><span className='text-md md:text-lg font-bold '> Saturday </span> 9am - 12pm</li>
               <li className='py-2'><span className='text-md md:text-lg font-bold '> Sunday </span> 1pm - 5pm</li>
             </ul>
