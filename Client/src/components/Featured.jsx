@@ -62,7 +62,7 @@ function Featured() {
                 <div key={index} className="p-4">
                   <div className="image-shadow bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 text-center">
                   <img
-  className="w-full h-[30rem] sm:h-[15rem] md:h-[20rem] object-cover"
+  className="w-full h-[30rem] sm:h-[15rem] md:h-[20rem] lg:h-[30rem] object-cover"
   src={project.image}
   alt="Card"
 />

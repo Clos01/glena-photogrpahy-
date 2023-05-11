@@ -1,5 +1,5 @@
 import React from "react";
-import { useSpring, animated } from 'react-spring';
+import { useSpring, animated } from "react-spring";
 import icon1 from "../images/icon1.png";
 import icon2 from "../images/icon2.png";
 import icon3 from "../images/icon3.png";
@@ -8,28 +8,27 @@ const cardsData = [
   {
     title: "High Quality Images",
     description:
-      "Capture life's precious moments with Glenda's Photography. I'm Glenda, the lead photographer, passionate about creating beautiful memories through my lens. From weddings to special events, let's tell your unique story together. Experience the love and joy in our gallery. Book your session today! 📸",
+      "Let me help you capture life's precious moments through Glenda Mendez Photography. I'm Glenda, your dedicated photographer, driven by a passion for creating beautiful memories that last a lifetime. From weddings to special events, I'm here to tell your unique story. Explore my gallery and experience the love and joy that i have captured. Book your session today and let's create something extraordinary together! 📸",
     icon: icon1,
   },
   {
     title: "Abundant Experience",
     description:
-      "As a photographer at Glenda Photography, I bring an abundance of personal experience to every session. With a genuine passion for capturing life's moments, I strive to create heartfelt and creative photographs that tell your unique story. Trust in my expertise and let's embark on a photographic journey together, creating cherished memories that will last a lifetime.🎞️",
+      " I approach each session with a profound awareness of life's situations, owing to a depth of personal experience. My goal is to create photography that is both sincere and imaginative, effectively communicating your unique story, and is driven by a true enthusiasm for capturing these special events. Let's start on an amazing photography memorable experience together.🎞️",
     icon: icon2,
   },
   {
     title: "Modern Equipments",
     description:
-      "At Glenda Photography, I am equipped with state-of-the-art tools and technology to ensure the highest quality results for your photos. With modern cameras, lenses, and lighting equipment, I am able to capture every detail with precision and clarity. Rest assured that your images will showcase the perfect blend of artistry and technical excellence, creating stunning visuals that exceed your expectations. Let me harness the power of modern equipment to bring your vision to life.",
+      "I use new methods and modern technology to ensure that your photographs are of the highest quality. Using cameras, lenses, and lighting equipment, I capture every detail with accuracy and clarity. You can rest easy knowing that your photographs will exceed your expectations by demonstrating an exceptional blend of creativity and technological competence. Let me to use current technology to bring your unique vision to life in breathtaking images. 🏞️ ",
     icon: icon3,
   },
 ];
 
-
 function Card({ title, description, icon }) {
   const animation = useSpring({
-    from: { opacity: 0, transform: 'scale(0.9)' },
-    to: { opacity: 1, transform: 'scale(1)' },
+    from: { opacity: 0, transform: "scale(0.9)" },
+    to: { opacity: 1, transform: "scale(1)" },
   });
 
   return (
@@ -37,7 +36,6 @@ function Card({ title, description, icon }) {
       style={{ ...animation, width: "90%", margin: "0 auto" }}
       className="bg-white p-8 rounded-lg shadow-md mb-8 min-h-96"
     >
-
       <div className="flex items-center justify-center mb-4 md:mb-8 -mt-12 md:-mt-16">
         <div className="bg-gray-100 rounded-full p-4 border-2 border-gray-800">
           <img src={icon} alt="icon" className="h-8 md:h-12 w-8 md:w-12" />
@@ -49,7 +47,6 @@ function Card({ title, description, icon }) {
     </animated.div>
   );
 }
-
 
 function CardsSection() {
   return (
