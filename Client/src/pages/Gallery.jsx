@@ -1,11 +1,11 @@
-// import React from 'react';
-// import GalleryImgs from '../components/GalleryImgs';
-// function Gallery() {
-//   return (
-//     <>
-//     <GalleryImgs/>
-//     </>
-//   )
-// }
+import React from 'react';
+import GalleryImgs from '../components/GalleryImgs';
+function Gallery() {
+  return (
+    <>
+    <GalleryImgs/>
+    </>
+  )
+}
 
-// export default Gallery
+export default Gallery

@@ -1,24 +1,78 @@
-import React from 'react'
-import img1 from './path/to/image1.jpg';
-import img2 from './path/to/image2.jpg';
-import img3 from './path/to/image3.jpg';
-import img4 from './path/to/image4.jpg';
-import img5 from './path/to/image5.jpg';
+import React, { useState, useCallback } from "react";
+import Gallery from "react-photo-gallery";
+import Carousel, { Modal, ModalGateway } from "react-images";
+import Art from "../images/ArtMuesuem.jpg";
+import BlueDress from "../images/BlueDress.jpg";
+import Dillion from "../images/Dillon.jpg";
+import Downtown from "../images/Downtown.jpg";
+import FlowerShoot from "../images/Flowersesh.jpg";
+import HeadShot from "../images/HeadShot.jpg";
 
-function GalleryImgs() {
-    const images = ['url1', 'url2', 'url3', 'url4', 'url5','url6']; 
+
+
+
+function Featured() {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+  const photos = [
+    {
+      src: Art,
+    },
+    {
+      src: BlueDress,
+    },
+    {
+      src: Dillion ,
+    },
+    {
+      src: Downtown,
+    },
+    {
+      src: FlowerShoot,
+    },
+    {
+      src: HeadShot,
+    },
+  
+  ];
+
+  const openLightbox = (index) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
+
   return (
-    <>
-      <div className='gallery'>
-      {images.map((img, index) => (
-        <div key={index} className='gallery-item'>
-          <img src={img} alt={`Gallery ${index}`} />
-        </div>
+    <div className="  p-4 bg-gray-200 grid grid-cols-3  g">
+      {photos.map((photo, index) => (
+        <img
+          key={index}
+          src={photo.src}
+          alt={photo.title}
+          onClick={() => openLightbox(index)}
+          className="GalleyImgs"
+        />
       ))}
+      <ModalGateway>
+        {viewerIsOpen ? (
+          <Modal onClose={closeLightbox}>
+            <Carousel
+              currentIndex={currentImage}
+              views={photos.map((x) => ({
+                src: x.src,
+                caption: x.title,
+              }))}
+            />
+          </Modal>
+        ) : null}
+      </ModalGateway>
     </div>
-    
-    </>
-  )
+  );
 }
 
-export default GalleryImgs
+export default Featured;
