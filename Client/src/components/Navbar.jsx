@@ -67,8 +67,11 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-22">
           <div className="flex-shrink-0 flex items-center">
+          <Link to="/" >
             <img className="h-22 w-24" src={logo} alt="logo" />
-          </div>
+            </Link>
+          </div> 
+         
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -77,7 +80,7 @@ function Navbar() {
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
-          <div className="hidden md:flex md:space-x-4">{navLinks}</div>
+          <div className="hidden md:flex   md:space-x-4">{navLinks}</div>
 
           {isOpen && (
             <div className="fixed top-0 left-0 w-full h-full bg-[#faf9f9] z-50 md:hidden">
@@ -89,7 +92,7 @@ function Navbar() {
                   <FaTimes />
                 </button>
               </div>
-              <div className="flex flex-col items-center justify-center mt-[2%]">
+              <div className="flex flex-col items-center justify-center mt-[50%]">
                 {navLinks}
               </div>
             </div>
