@@ -167,7 +167,7 @@ function Polices() {
                   method of payment, which is why You can choose to pay with
                   Cash,Venmo,ApplePay and Zelle.
                 </p>
-                <div className="PaymentImgs flex justify-center items-center space-x-10 mt-2 ">
+                <div className="PaymentImgs flex justify-center items-center space-x-5 mt-2 ">
                   <img src={MoneySign} alt="Cash" />
                   <img src={Venmo} alt="Venmo" />
                   <img src={ApplePay} alt="Apple Pay" />
