@@ -92,7 +92,7 @@ function Navbar() {
                   <FaTimes />
                 </button>
               </div>
-              <div className="flex flex-col items-center justify-center mt-[50%]">
+              <div className="flex flex-col items-center justify-center mt-[30%]">
                 {navLinks}
               </div>
             </div>
