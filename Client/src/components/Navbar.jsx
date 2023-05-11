@@ -72,12 +72,13 @@ function Navbar() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-900 hover:text-green focus:outline-none"
+              className="text-gray-900 hover:text-green focus:outline-none h-15"
             >
               {isOpen ? <FaTimes /> : <FaBars />}
             </button>
           </div>
-          <div className="hidden md:flex space-x-8">{navLinks}</div>
+          <div className="hidden md:flex md:space-x-4">{navLinks}</div>
+
           {isOpen && (
             <div className="fixed top-0 left-0 w-full h-full bg-[#faf9f9] z-50 md:hidden">
               <div className="absolute top-0 right-0 pt-4 pr-4">

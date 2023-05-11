@@ -50,13 +50,14 @@ function Featured() {
   return (
     <div className="  p-4 bg-gray-200 grid grid-cols-3  g">
       {photos.map((photo, index) => (
-        <img
-          key={index}
-          src={photo.src}
-          alt={photo.title}
-          onClick={() => openLightbox(index)}
-          className="GalleyImgs"
-        />
+    <img
+    key={index}
+    src={photo.src}
+    alt={photo.title}
+    onClick={() => openLightbox(index)}
+    className="GalleyImgs transform transition duration-200 ease-in-out hover:scale-100 hover:opacity-80"
+  />
+  
       ))}
       <ModalGateway>
         {viewerIsOpen ? (

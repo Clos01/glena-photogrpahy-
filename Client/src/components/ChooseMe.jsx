@@ -55,7 +55,7 @@ function CardsSection() {
   return (
     <section className="bg-gray-100 py-20">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-1 gap-8">
           {cardsData.map((card) => (
             <Card key={card.title} {...card} />
           ))}
