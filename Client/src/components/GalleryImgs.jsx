@@ -7,6 +7,7 @@ import Dillion from "../images/Dillon.jpg";
 import Downtown from "../images/Downtown.jpg";
 import FlowerShoot from "../images/Flowersesh.jpg";
 import HeadShot from "../images/HeadShot.jpg";
+import { a as animated, useSpring } from '@react-spring/web';
 
 
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GlendaInsta from "../images/GlendaInsta.png";
-import { useSpring, animated } from 'react-spring';
+import { a as animated, useSpring } from '@react-spring/web';
+
 
 function ContactForm() {
   const formAnimation = useSpring({
