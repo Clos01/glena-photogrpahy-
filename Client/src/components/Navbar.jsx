@@ -68,7 +68,7 @@ function Navbar() {
         <div className="relative flex items-center justify-between h-22">
           <div className="flex-shrink-0 flex items-center">
           <Link to="/" >
-            <img className="h-22 w-24" src={logo} alt="logo" />
+            <img className=" Glogo h-22 w-24" src={logo} alt="logo" />
             </Link>
           </div> 
          
