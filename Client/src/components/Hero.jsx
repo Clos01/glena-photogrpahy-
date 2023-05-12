@@ -1,5 +1,6 @@
 import React from "react";
 import glenda from "../images/Glenda.png";
+import LazyImage from "../components/Lazyimg"; 
 
 function Hero() {
   return (
@@ -7,12 +8,11 @@ function Hero() {
       <div className="relative h-[600px]">
         {/* Background image with transparent overlay */}
         <div className="absolute inset-0 ">
-
-          <img
-            className="w-full h-full object-cover object-center custom-object-position custom-object-scale bg-gradient-to-r from-black via-transparent to-black opacity-100"
-            src={glenda}
-            alt="Background"
-          />
+        <LazyImage
+  className=" Heroimg w-full h-full object-cover object-center custom-object-position custom-object-scale bg-gradient-to-r from-black via-transparent to-black opacity-100"
+  src={glenda}
+  alt="Background"
+/>
 
           <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-50"></div>
         </div>
