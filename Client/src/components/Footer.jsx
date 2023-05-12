@@ -17,10 +17,10 @@ function Footer() {
       <div className="flex flex-col md:flex-row lg:p-8">
         <img
           src={Cameralogo}
-          alt=""
+          alt="Company Logo"
           className="md:w-[25rem] object-cover h-60 rounded-md md:mr-4"
         />
-        <div className="flex flex-col md:flex-row flex-grow">
+        <address className="flex flex-col md:flex-row flex-grow">
           <div className="flex flex-col border-r border-gray-300 pr-4 lg:pr-8 md:w-1/2">
             <div className=''>
               <p className="font-medium text-lg md:text-2xl ">Call us</p>
@@ -31,7 +31,7 @@ function Footer() {
                 <li className='py-2'><span className='text-md md:text-lg font-bold '> Saturday </span> 3pm - 4pm</li>
                 <li className='py-2'><span className='text-md md:text-lg font-bold '> Sunday </span> 10am - 3pm</li>
               </ul>
-              <p className="font-medium text-xs md:text-sm">glenda.mendez.photography@gmail.com</p>
+              <a href="mailto:glenda.mendez.photography@gmail.com" className="font-medium text-xs md:text-sm">glenda.mendez.photography@gmail.com</a>
             </div>
           </div>
           <div className="flex flex-col justify-start  lg:pl-8 md:w-1/2">
@@ -42,9 +42,9 @@ function Footer() {
             </ul>
             <p className="font-medium text-xs md:text-sm">Raleigh,Nc</p>
           </div>
-        </div>
+        </address>
       </div>
-      <div className="flex justify-center mt-4 text-gray-500">
+      <div className="flex justify-center mt-4 text-gray-900">
         &copy; 2023. Glenda Mendez. All rights reserved.
       </div>
     </footer>
