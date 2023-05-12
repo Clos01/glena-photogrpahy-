@@ -7,7 +7,9 @@ function ContactForm() {
   const formAnimation = useSpring({
     from: { opacity: 0, marginTop: -500 },
     to: { opacity: 1, marginTop: 0 },
+    config: { tension: 450, friction: 100 }, 
   });
+  
   
   const instaAnimation = useSpring({
     from: { opacity: 0 },
@@ -35,7 +37,8 @@ function ContactForm() {
     // Submit form logic goes here
     console.log(formState);
   };
-
+ 
+  
   return (
     <>
       <div className="flex flex-col md:flex-row justify-center items-center border-black ">
