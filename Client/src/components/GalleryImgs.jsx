@@ -6,6 +6,7 @@ import Dillion from "../images/Dillon.jpg";
 import Downtown from "../images/Downtown.jpg";
 import FlowerShoot from "../images/Flowersesh.jpg";
 import HeadShot from "../images/HeadShot.jpg";
+import LazyImage from "../components/Lazyimg";
 
 
 
@@ -49,7 +50,7 @@ function Featured() {
   return (
     <div className="p-4 bg-gray-200 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {photos.map((photo, index) => (
-      <img
+      <LazyImage
         key={index}
         src={photo.src}
         alt={photo.title}

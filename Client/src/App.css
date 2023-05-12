@@ -20,6 +20,18 @@ Light Green:
 #498054c0
 Dark Green: 
 #498054 */
+.Heroimg {
+  transition: opacity 1s;
+  opacity: 0;
+  background-color: #ffffff;
+}
+
+.Heroimg.fade {
+  opacity: 1;
+
+}
+
+
 
 .Bg-container img {
   padding: 8px; /* Adjust the padding as needed */
@@ -104,10 +116,18 @@ color: #e9e9e9;
   display: inline-block;
   left: 50%;
 }
+.GalleyImgs{
+  transition: opacity 1s;
+  opacity: 0;
+  background-color: #ffffff;
 
+}
 .GalleyImgs:hover {
   cursor: pointer;
+}.GalleyImgs.fade{
+  opacity: 1;
 }
+
 
 .text-shadow-lg {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
