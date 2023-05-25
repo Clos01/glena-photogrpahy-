@@ -95,7 +95,7 @@ function Services() {
     {
       title: "Travel Fees",
       content: [
-        { description: "30/30+ minutes", price: "$10" },
+        { description: "30/30+ min", price: "$10" },
         { description: "1/1+ hour", price: "$25" },
         { description: "2/2+ hours", price: "$50" },
         { description: "3/3+ hours", price: "$75" },
@@ -135,7 +135,7 @@ function Services() {
             <div className="slide active">
               <div className="bg-white rounded-lg shadow-md px-8 py-12">
                 <div className="text-center">
-                  <h3 className="text-2xl font-medium text-gray-900 mb-2">
+                  <h3 className="text-2xl font-semibold text-[#0f3649] mb-6">
                     {slides[currentSlide].title}
                   </h3>
                 </div>
@@ -143,22 +143,30 @@ function Services() {
                   {slides[currentSlide].content.map((item, index) => (
                     <div
                       key={index}
-                      className={`card-item flex items-center justify-between bg-gray-100 p-4 rounded-lg ${
+                      className={`card-item flex items-center justify-center bg-[#498054c0] p-4 rounded-lg ${
                         slides[currentSlide].content.length === 1
                           ? "mx-auto"
                           : ""
                       }`}
                     >
-                      <div className="card-content flex-1">
+                      <div className="card-content">
                         <div className="flex items-center">
-                          <div className="mr-4">
-                            <h4 className="text-lg font-medium text-gray-900 mt-2 mb-2">
-                              {`${item.image} Images`}
+                          {item.image && (
+                            <div className="mr-4">
+                              <h4 className="text-lg font-medium text-[#0f3649] mt-2 mb-2">
+                                {`${item.image} Images`}
+                              </h4>
+                            </div>
+                          )}
+                          <div className="flex items-center">
+                            <h4 className="text-lg font-medium text-[#0f3649] mt-2 mb-2">
+                              {item.description && (
+                                <span className="mr-2">{item.description}</span>
+                              )}
+                              <span className="text-2xl font-semibold text-[#0f3649]">
+                                {item.price}
+                              </span>
                             </h4>
-                            <p className="text-gray-700">{item.description}</p>
-                          </div>
-                          <div className="card-price text-2xl font-medium text-gray-900">
-                            {item.price}
                           </div>
                         </div>
                       </div>
@@ -178,6 +186,7 @@ function Services() {
             ))}
           </div>
 
+          {/* carousel arrows */}
           <div className="arrows-container flex justify-between ">
             <button
               className="prev absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-0 sm:inline-block"
