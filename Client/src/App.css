@@ -1,6 +1,7 @@
 custom-object-position {
   object-position: 20% 29%;
 }
+
 .custom-object-scale{
   transform: scale(1);
 }
@@ -134,4 +135,23 @@ color: #e9e9e9;
 }
 .Glogo:hover{
 cursor: pointer;
+}
+
+.carousel-image {
+  max-width: 80%;
+  max-height: 80%;
+
+  @media (min-width: 768px) {
+    max-width: 40%;
+    max-height: 40%;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 20%;
+    max-height: 20%;
+  }
+}
+
+.carousel-arrow {
+  cursor: pointer;
 }
